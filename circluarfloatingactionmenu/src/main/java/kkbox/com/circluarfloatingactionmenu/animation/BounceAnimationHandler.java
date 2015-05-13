@@ -9,7 +9,7 @@ import android.animation.PropertyValuesHolder;
 import android.graphics.Point;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.OvershootInterpolator;
+import android.view.animation.BounceInterpolator;
 
 import kkbox.com.circluarfloatingactionmenu.FloatingActionMenu;
 
@@ -32,7 +32,6 @@ public class BounceAnimationHandler extends MenuAnimationHandler {
 
     @Override
     public void animateMenuOpening(Point center) {
-        //TODO Modify animation.
         super.animateMenuOpening(center);
 
         setAnimating(true);
@@ -55,7 +54,7 @@ public class BounceAnimationHandler extends MenuAnimationHandler {
 
             final ObjectAnimator animation = ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view, pvhX, pvhY, pvhR, pvhsX, pvhsY, pvhA);
             animation.setDuration(DURATION);
-            animation.setInterpolator(new OvershootInterpolator(0.9f));
+            animation.setInterpolator(new BounceInterpolator());
             animation.addListener(new SubActionItemAnimationListener(menu.getSubActionItems().get(i), ActionType.OPENING));
 
             if(i == 0) {
