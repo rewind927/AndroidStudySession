@@ -35,7 +35,7 @@ import kkbox.com.circluarfloatingactionmenu.animation.MenuAnimationHandler;
 public class FloatingActionMenu {
 
     /** Reference to the view (usually a button) to trigger the menu to show */
-    private View mainActionView;
+    protected View mainActionView;
     /** The angle (in degrees, modulus 360) which the circular menu starts from  */
     private int startAngle;
     /** The angle (in degrees, modulus 360) which the circular menu ends at  */
@@ -43,7 +43,7 @@ public class FloatingActionMenu {
     /** Distance of menu items from mainActionView */
     private int radius;
     /** List of menu items */
-    private List<Item> subActionItems;
+    protected List<Item> subActionItems;
     /** Reference to the preferred {@link MenuAnimationHandler} object */
     private MenuAnimationHandler animationHandler;
     /** Reference to a listener that listens open/close actions */
@@ -342,7 +342,7 @@ public class FloatingActionMenu {
      * Calculates the desired positions of all items.
      * @return getActionViewCenter()
      */
-    private Point calculateItemPositions() {
+    protected Point calculateItemPositions() {
         // Create an arc that starts from startAngle and ends at endAngle
         // in an area that is as large as 4*radius^2
         final Point center = getActionViewCenter();

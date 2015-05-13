@@ -10,8 +10,10 @@ import android.widget.ImageView;
 
 import kkbox.com.circluarfloatingactionmenu.FloatingActionButton;
 import kkbox.com.circluarfloatingactionmenu.FloatingActionMenu;
+import kkbox.com.circluarfloatingactionmenu.NormalFloatingActionMenu;
 import kkbox.com.circluarfloatingactionmenu.R;
 import kkbox.com.circluarfloatingactionmenu.SubActionButton;
+import kkbox.com.circluarfloatingactionmenu.animation.OvershootAnimationHandler;
 
 public class MenuWithFABActivity extends ActionBarActivity {
 
@@ -41,11 +43,12 @@ public class MenuWithFABActivity extends ActionBarActivity {
 
         // Build the menu with default options: light theme, 90 degrees, 72dp radius.
         // Set 4 default SubActionButtons
-        final FloatingActionMenu rightLowerMenu = new FloatingActionMenu.Builder(this)
+        final NormalFloatingActionMenu rightLowerMenu = new NormalFloatingActionMenu.Builder(this)
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon1).build())
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon2).build())
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon3).build())
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon4).build())
+                                                .setRadius(180)
                                                 .attachTo(rightLowerButton)
                                                 .build();
 
@@ -79,7 +82,7 @@ public class MenuWithFABActivity extends ActionBarActivity {
         int redActionMenuRadius = getResources().getDimensionPixelSize(R.dimen.red_action_menu_radius);
         int blueSubActionButtonSize = getResources().getDimensionPixelSize(R.dimen.blue_sub_action_button_size);
         int blueSubActionButtonContentMargin = getResources().getDimensionPixelSize(R.dimen.blue_sub_action_button_content_margin);
-            
+
         ImageView fabIconStar = new ImageView(this);
         fabIconStar.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_important));
 
@@ -137,6 +140,8 @@ public class MenuWithFABActivity extends ActionBarActivity {
                 .addSubActionView(lCSubBuilder.setContentView(lcIcon4, blueContentParams).build())
                 .addSubActionView(lCSubBuilder.setContentView(lcIcon5, blueContentParams).build())
                 .setRadius(redActionMenuRadius)
+                //TODO implement OvershootAnimationHandler and BounceAnimationHandler
+                .setAnimationHandler(new OvershootAnimationHandler())
                 .setStartAngle(70)
                 .setEndAngle(-70)
                 .attachTo(leftCenterButton)
