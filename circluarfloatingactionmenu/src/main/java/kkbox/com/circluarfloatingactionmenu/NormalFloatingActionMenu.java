@@ -22,7 +22,7 @@ public class NormalFloatingActionMenu extends FloatingActionMenu{
         final Point center = getActionViewCenter();
         for (int i = 0; i < subActionItems.size(); i++) {
             subActionItems.get(i).x = center.x - subActionItems.get(i).width / 2;
-            subActionItems.get(i).y = center.y - (i) * getRadius() - subActionItems.get(i).height / 2 - mainActionView.getMeasuredHeight();
+            subActionItems.get(i).y = center.y - (i + 1) * getRadius() - subActionItems.get(i).height / 2 - mainActionView.getHeight() / 2;
         }
         return center;
     }
