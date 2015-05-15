@@ -48,7 +48,6 @@ public class MenuWithFABActivity extends ActionBarActivity {
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon2).build())
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon3).build())
                                                 .addSubActionView(rLSubBuilder.setContentView(rlIcon4).build())
-                                                .setRadius(180)
                                                 .attachTo(rightLowerButton)
                                                 .build();
 
