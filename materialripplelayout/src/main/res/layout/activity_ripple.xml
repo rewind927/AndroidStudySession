@@ -1,0 +1,96 @@
+<com.johnny.materialripplelayout.LockableScrollView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/scrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".MainActivity">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				  xmlns:tools="http://schemas.android.com/tools"
+				  android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  android:orientation="vertical">
+
+		<com.balysv.materialripple.MaterialRippleLayout
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:background="#ffffff"
+				app:rippleAlpha="0.4"
+				app:rippleColor="#585858"
+				app:rippleDelayClick="false"
+				app:rippleHover="true"
+				app:rippleOverlay="true">
+
+			<TextView
+					android:clickable="true"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="5dp"
+					android:text="Original"
+					android:textSize="30dp"/>
+		</com.balysv.materialripple.MaterialRippleLayout>
+
+		<com.johnny.materialripplelayout.PracticeRipple01
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:background="#ffffff"
+				app:rippleAlpha="0.4"
+				app:rippleColor="#4527a0"
+				app:rippleDelayClick="false"
+				app:rippleHover="true"
+				app:rippleOverlay="true">
+
+			<TextView
+					android:clickable="true"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="5dp"
+					android:text="Practice01"
+					android:textSize="30dp"/>
+		</com.johnny.materialripplelayout.PracticeRipple01>
+
+		<!-- TODO 修改參數新增三個顏色 #4dd0e1 / #0097a7 / #006064 -->
+		<com.johnny.materialripplelayout.PracticeRipple02
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:background="#ffffff"
+				app:rippleAlpha="0.4"
+				app:rippleColor01="#4dd0e1"
+				app:rippleColor02="#0097a7"
+				app:rippleColor03="#006064"
+				app:rippleDelayClick="false"
+				app:rippleHover="true"
+				app:rippleOverlay="true">
+
+			<TextView
+					android:clickable="true"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="5dp"
+					android:text="Practice02"
+					android:textSize="30dp"/>
+		</com.johnny.materialripplelayout.PracticeRipple02>
+
+		<com.johnny.materialripplelayout.PracticeRipple03
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:background="#ffffff"
+				app:rippleAlpha="0.4"
+				app:rippleColor="#3b50ce"
+				app:rippleDelayClick="false"
+				app:rippleHover="true"
+				app:rippleOverlay="true">
+
+			<TextView
+					android:clickable="true"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="5dp"
+					android:text="Practice03"
+					android:textSize="30dp"/>
+		</com.johnny.materialripplelayout.PracticeRipple03>
+	</LinearLayout>
+
+</com.johnny.materialripplelayout.LockableScrollView>

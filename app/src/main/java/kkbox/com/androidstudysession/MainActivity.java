@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.johnny.materialripplelayout.activity.RippleActivity;
+
 import kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity;
 
 public class MainActivity extends ActionBarActivity {
@@ -52,6 +54,9 @@ public class MainActivity extends ActionBarActivity {
 			switch (position) {
 				case 0:
 					startActivity(new Intent(getActivity(), MenuWithFABActivity.class));
+					break;
+				case 1:
+					startActivity(new Intent(getActivity(), RippleActivity.class));
 					break;
 			}
 		}
