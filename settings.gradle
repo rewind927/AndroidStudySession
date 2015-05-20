@@ -1,1 +1,1 @@
-include ':app', ':circluarfloatingactionmenu'
+include ':app', ':circluarfloatingactionmenu', ':materialripplelayout'
