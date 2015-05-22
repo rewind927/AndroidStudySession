@@ -469,6 +469,7 @@ public class PracticeRipple03 extends FrameLayout {
 
 				// TODO 改畫圖片 (不要偷看圖喔！)
 				// TODO 將原本的畫圓改為 Clipping Path
+				// TODO 要先設定好 Clipping Path 再畫圖
 				Path circle = new Path();
 				circle.addCircle(currentCoords.x, currentCoords.y, radius, Path.Direction.CW);
 				canvas.clipPath(circle);
