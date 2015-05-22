@@ -27,7 +27,7 @@ https://docs.google.com/spreadsheets/d/1G9dRTedkNuoaW34fEf_szSTRbsVUrSXr1z0qlfWg
 Date | Speaker | Topic | Slide |
 -----|---------|-------|--------|
 2015/5/15|Ryan|[CircularFloatingActionMenu](https://github.com/oguzbilgener/CircularFloatingActionMenu)|[CircularFloatingActionMenu](https://docs.google.com/presentation/d/1l9WslPOaDXufh9w5Sa1OY8ghXioEhtELTYoosKHsTXc/edit?usp=sharing)
-2015/5/22|Johnny|[Material Ripple Layout](https://github.com/balysv/material-ripple)|
+2015/5/22|Johnny|[Material Ripple Layout](https://github.com/balysv/material-ripple)|[Material Ripple Layout](https://docs.google.com/presentation/d/1kEzZ6aU3xz3cymKeYtBXYDbuCx_MmXdOgThP6kWSTco/edit?usp=sharing)
 2015/5/29|Ethan|[ObservableScrollView](https://github.com/ksoichiro/Android-ObservableScrollView)|
 2015/6/5|Kami|[FloatLabelLayout](https://gist.github.com/chrisbanes/11247418)|
 2015/6/12|Ken|[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|
