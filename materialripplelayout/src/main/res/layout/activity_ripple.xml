@@ -57,9 +57,7 @@
 				android:layout_height="250dp"
 				android:background="#ffffff"
 				app:rippleAlpha="0.4"
-				app:rippleColor01="#4dd0e1"
-				app:rippleColor02="#0097a7"
-				app:rippleColor03="#006064"
+				app:rippleColor="#4dd0e1"
 				app:rippleDelayClick="false"
 				app:rippleHover="true"
 				app:rippleOverlay="true">

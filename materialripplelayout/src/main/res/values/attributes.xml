@@ -3,9 +3,6 @@
 	<declare-styleable name="MaterialRippleLayout">
 		<attr name="rippleColor" format="color" localization="suggested"/>
 		<!--TODO 新增幾個 attr ，名稱為 rippleColor01 / rippleColor02 / rippleColor03-->
-		<attr name="rippleColor01" format="color" localization="suggested"/>
-		<attr name="rippleColor02" format="color" localization="suggested"/>
-		<attr name="rippleColor03" format="color" localization="suggested"/>
 		<attr name="rippleDimension" format="dimension" localization="suggested"/>
 		<attr name="rippleOverlay" format="boolean" localization="suggested"/>
 		<attr name="rippleAlpha" format="float" localization="suggested"/>
