@@ -20,6 +20,8 @@
 				android:name="kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity"/>
 		<activity
 				android:name="com.johnny.materialripplelayout.activity.RippleActivity"/>
+		<activity
+				android:name="com.daimajia.numberprogressbar.example.NumberProgressBarActivity"/>
 	</application>
 
 </manifest>
