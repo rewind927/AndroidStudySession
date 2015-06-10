@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidNumberProgressBar</string>
+    <string name="finish">ProgressBar is finished.</string>
+</resources>

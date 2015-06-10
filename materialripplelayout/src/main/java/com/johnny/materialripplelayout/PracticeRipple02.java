@@ -74,10 +74,14 @@ public class PracticeRipple02 extends FrameLayout {
 
 	private final Paint paint01 = new Paint(Paint.ANTI_ALIAS_FLAG);
 	// TODO 多做二個 Paint
+	private final Paint paint02 = new Paint(Paint.ANTI_ALIAS_FLAG);
+	private final Paint paint03 = new Paint(Paint.ANTI_ALIAS_FLAG);
 	private final Rect bounds = new Rect();
 
 	private int rippleColor01;
 	// TODO 加上一些 從 attr 的來參數
+	private int rippleColor02;
+	private int rippleColor03;
 
 	private boolean rippleOverlay;
 	private boolean rippleHover;
@@ -130,8 +134,10 @@ public class PracticeRipple02 extends FrameLayout {
 
 		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MaterialRippleLayout);
 
-		rippleColor01 = a.getColor(R.styleable.MaterialRippleLayout_rippleColor, DEFAULT_COLOR);
+		rippleColor01 = a.getColor(R.styleable.MaterialRippleLayout_rippleColor01, DEFAULT_COLOR);
 		// TODO 加上一些 從 attr 的來參數
+		rippleColor02 = a.getColor(R.styleable.MaterialRippleLayout_rippleColor02, DEFAULT_COLOR);
+		rippleColor03 = a.getColor(R.styleable.MaterialRippleLayout_rippleColor03, DEFAULT_COLOR);
 		rippleDiameter = a.getDimensionPixelSize(
 				R.styleable.MaterialRippleLayout_rippleDimension,
 				(int) dpToPx(getResources(), DEFAULT_DIAMETER_DP)
@@ -152,6 +158,10 @@ public class PracticeRipple02 extends FrameLayout {
 		paint01.setColor(rippleColor01);
 		paint01.setAlpha(rippleAlpha);
 		// TODO 多做二個 Paint
+		paint02.setColor(rippleColor02);
+		paint02.setAlpha(rippleAlpha);
+		paint03.setColor(rippleColor03);
+		paint03.setAlpha(rippleAlpha);
 	}
 
 
@@ -469,6 +479,8 @@ public class PracticeRipple02 extends FrameLayout {
 
 				canvas.drawCircle(currentCoords.x, currentCoords.y, radius, paint01);
 				// TODO 另外多畫二個圓圈，半徑為原本的 1/3 大小、2/3 大小
+				canvas.drawCircle(currentCoords.x, currentCoords.y, radius / 3 * 2, paint02);
+				canvas.drawCircle(currentCoords.x, currentCoords.y, radius / 3, paint03);
 			}
 		} else {
 			if (!positionChanged) {
@@ -538,6 +550,19 @@ public class PracticeRipple02 extends FrameLayout {
 	}
 
 	// TODO 加上二個 setter 名稱為 setRippleColor02() / setRippleColor03()
+	public void setRippleColor02(int rippleColor) {
+		this.rippleColor02 = rippleColor;
+		paint02.setColor(rippleColor);
+		paint02.setAlpha(rippleAlpha);
+		invalidate();
+	}
+
+	public void setRippleColor03(int rippleColor) {
+		this.rippleColor03 = rippleColor;
+		paint03.setColor(rippleColor);
+		paint03.setAlpha(rippleAlpha);
+		invalidate();
+	}
 
 	public void setRippleOverlay(boolean rippleOverlay) {
 		this.rippleOverlay = rippleOverlay;

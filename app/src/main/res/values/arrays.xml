@@ -3,5 +3,6 @@
 	<string-array name="entries">
 		<item>CircularFloatingActionButtonMenu</item>
 		<item>MaterialRippleLayout</item>
+		<item>NumberProgressBar</item>
 	</string-array>
 </resources>

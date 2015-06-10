@@ -304,7 +304,7 @@ public class PracticeRipple01 extends FrameLayout {
 			hoverAnimator.cancel();
 		}
 		// TODO 因為星星的半徑改變了，修改它讓它可以填滿整個畫面
-		final float radius = (float) (Math.sqrt(Math.pow(getWidth(), 2) + Math.pow(getHeight(), 2)) * 1.2f);
+		final float radius = (float) (Math.sqrt(Math.pow(getWidth(), 2) + Math.pow(getHeight(), 2)) * 1.2f * 2f);
 		hoverAnimator = ObjectAnimator.ofFloat(this, radiusProperty, rippleDiameter, radius)
 				.setDuration(HOVER_DURATION);
 		hoverAnimator.setInterpolator(new LinearInterpolator());
@@ -373,7 +373,7 @@ public class PracticeRipple01 extends FrameLayout {
 		final float radiusX = halfWidth > currentCoords.x ? width - currentCoords.x : currentCoords.x;
 		final float radiusY = halfHeight > currentCoords.y ? height - currentCoords.y : currentCoords.y;
 		// TODO 因為半徑改變了，修改它讓它可以填滿整個畫面
-		return (float) Math.sqrt(Math.pow(radiusX, 2) + Math.pow(radiusY, 2)) * 1.2f;
+		return (float) Math.sqrt(Math.pow(radiusX, 2) + Math.pow(radiusY, 2)) * 1.2f * 2f;
 	}
 
 	private boolean isInScrollingContainer() {
@@ -462,7 +462,7 @@ public class PracticeRipple01 extends FrameLayout {
 				}
 
 				// TODO 修改它，改成畫星星
-				canvas.drawCircle(currentCoords.x, currentCoords.y, radius, paint);
+				canvas.drawPath(createStarBySyze(currentCoords, radius, 5), paint);
 			}
 		} else {
 			if (!positionChanged) {
@@ -474,7 +474,7 @@ public class PracticeRipple01 extends FrameLayout {
 	}
 
 	// TODO 修改這個畫星星的 Function，讓它可以置中
-	private Path createStarBySyze(float width, int steps) {
+	private Path createStarBySyze(Point centre, float width, int steps) {
 		float halfWidth = width / 2.0F;
 		float bigRadius = halfWidth;
 		float radius = halfWidth / 2.0F;
@@ -482,13 +482,13 @@ public class PracticeRipple01 extends FrameLayout {
 		float halfDegreesPerStep = degreesPerStep / 2.0F;
 		Path ret = new Path();
 		ret.setFillType(Path.FillType.EVEN_ODD);
-		float max = (float) (2.0F* Math.PI);
-		ret.moveTo(width, halfWidth);
+		float max = (float) (2.0F * Math.PI);
+		ret.moveTo(width + centre.x - halfWidth, halfWidth + centre.y - halfWidth);
 		for (double step = 0; step < max; step += degreesPerStep) {
-			ret.lineTo((float)(halfWidth + bigRadius * Math.cos(step))
-					, (float)(halfWidth + bigRadius * Math.sin(step)));
-			ret.lineTo((float)(halfWidth + radius * Math.cos(step + halfDegreesPerStep))
-					, (float)(halfWidth + radius * Math.sin(step + halfDegreesPerStep)));
+			ret.lineTo((float) (centre.x + bigRadius * Math.cos(step))
+					, (float) (centre.y + bigRadius * Math.sin(step)));
+			ret.lineTo((float) (centre.x + radius * Math.cos(step + halfDegreesPerStep))
+					, (float) (centre.y + radius * Math.sin(step + halfDegreesPerStep)));
 		}
 		ret.close();
 		return ret;

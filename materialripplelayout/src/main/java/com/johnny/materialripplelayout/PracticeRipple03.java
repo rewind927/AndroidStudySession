@@ -110,6 +110,7 @@ public class PracticeRipple03 extends FrameLayout {
 	private PressedEvent pendingPressEvent;
 
 	// TODO 新增一個 Bitmap
+	private Bitmap bitmap;
 
 	public static RippleBuilder on(View view) {
 		return new RippleBuilder(view);
@@ -151,6 +152,7 @@ public class PracticeRipple03 extends FrameLayout {
 		paint.setColor(rippleColor);
 		paint.setAlpha(rippleAlpha);
 		// TODO 將 Resource 解圖，圖片為 R.drawable.image (不要偷看圖喔！)
+		bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.image);
 	}
 
 
@@ -468,7 +470,10 @@ public class PracticeRipple03 extends FrameLayout {
 				// TODO 改畫圖片 (不要偷看圖喔！)
 				// TODO 將原本的畫圓改為 Clipping Path
 				// TODO 要先設定好 Clipping Path 再畫圖
-				canvas.drawCircle(currentCoords.x, currentCoords.y, radius, paint);
+				Path circle = new Path();
+				circle.addCircle(currentCoords.x, currentCoords.y, radius, Path.Direction.CW);
+				canvas.clipPath(circle);
+				canvas.drawBitmap(bitmap, 0, 0, paint);
 			}
 		} else {
 			if (!positionChanged) {
