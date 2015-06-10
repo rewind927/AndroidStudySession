@@ -5,7 +5,11 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.NinePatchDrawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
@@ -31,12 +35,14 @@ public class NumberProgressBar extends View {
     /**
      * The progress area bar color.
      */
-    private int mReachedBarColor;
+    private int mReachedBarBackgroundColor;
+    private int mReachedBarBackgroundResId;
 
     /**
      * The bar unreached area color.
      */
-    private int mUnreachedBarColor;
+    private int mUnreachedBarBackgroundColor;
+    private int mUnreachedBarBackgroundResId;
 
     /**
      * The progress text color.
@@ -84,9 +90,9 @@ public class NumberProgressBar extends View {
     private static final String INSTANCE_TEXT_COLOR = "text_color";
     private static final String INSTANCE_TEXT_SIZE = "text_size";
     private static final String INSTANCE_REACHED_BAR_HEIGHT = "reached_bar_height";
-    private static final String INSTANCE_REACHED_BAR_COLOR = "reached_bar_color";
+    private static final String INSTANCE_REACHED_BAR_BACKGROUND = "reached_bar_color";
     private static final String INSTANCE_UNREACHED_BAR_HEIGHT = "unreached_bar_height";
-    private static final String INSTANCE_UNREACHED_BAR_COLOR = "unreached_bar_color";
+    private static final String INSTANCE_UNREACHED_BAR_BACKGROUND = "unreached_bar_color";
     private static final String INSTANCE_MAX = "max";
     private static final String INSTANCE_PROGRESS = "progress";
     private static final String INSTANCE_SUFFIX = "suffix";
@@ -176,8 +182,30 @@ public class NumberProgressBar extends View {
         // Load styled attributes.
         final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.NumberProgressBar);
 
-        mReachedBarColor = attributes.getColor(R.styleable.NumberProgressBar_progress_reached_color, default_reached_color);
-        mUnreachedBarColor = attributes.getColor(R.styleable.NumberProgressBar_progress_unreached_color, default_unreached_color);
+        int reachedBarResId = attributes.getResourceId(R.styleable.NumberProgressBar_progress_reached_background, 0);
+        if (reachedBarResId > 0) {
+            Drawable reachedBarDrawable = getResources().getDrawable(reachedBarResId);
+            if (reachedBarDrawable instanceof ColorDrawable) {
+                mReachedBarBackgroundColor = ((ColorDrawable) reachedBarDrawable).getColor();
+            } else {
+                mReachedBarBackgroundResId = reachedBarResId;
+            }
+        } else {
+            mReachedBarBackgroundColor = attributes.getColor(R.styleable.NumberProgressBar_progress_reached_background, default_reached_color);
+        }
+
+        int unreachedBarResId = attributes.getResourceId(R.styleable.NumberProgressBar_progress_unreached_background, 0);
+        if (unreachedBarResId > 0) {
+            Drawable unreachedBarDrawable = getResources().getDrawable(unreachedBarResId);
+            if (unreachedBarDrawable instanceof ColorDrawable) {
+                mUnreachedBarBackgroundColor = ((ColorDrawable) unreachedBarDrawable).getColor();
+            } else {
+                mUnreachedBarBackgroundResId = unreachedBarResId;
+            }
+        } else {
+            mUnreachedBarBackgroundColor = attributes.getColor(R.styleable.NumberProgressBar_progress_unreached_background, default_unreached_color);
+        }
+
         mTextColor = attributes.getColor(R.styleable.NumberProgressBar_progress_text_color, default_text_color);
         mTextSize = attributes.getDimension(R.styleable.NumberProgressBar_progress_text_size, default_text_size);
 
@@ -253,11 +281,39 @@ public class NumberProgressBar extends View {
         }
 
         if (mDrawReachedBar) {
-            canvas.drawRect(mReachedRectF, mReachedBarPaint);
+            if (mReachedBarBackgroundResId != 0) {
+                Rect rect = new Rect();
+                mReachedRectF.round(rect);
+                Drawable drawable = getResources().getDrawable(mReachedBarBackgroundResId);
+                if (drawable instanceof NinePatchDrawable) {
+                    NinePatchDrawable ninePatchDrawable = (NinePatchDrawable) drawable;
+                    ninePatchDrawable.setBounds(rect);
+                    ninePatchDrawable.draw(canvas);
+                } else {
+                    drawable.setBounds(rect);
+                    drawable.draw(canvas);
+                }
+            } else {
+                canvas.drawRect(mReachedRectF, mReachedBarPaint);
+            }
         }
 
         if (mDrawUnreachedBar) {
-            canvas.drawRect(mUnreachedRectF, mUnreachedBarPaint);
+            if (mUnreachedBarBackgroundResId != 0) {
+                Rect rect = new Rect();
+                mUnreachedRectF.round(rect);
+                Drawable drawable = getResources().getDrawable(mUnreachedBarBackgroundResId);
+                if (drawable instanceof NinePatchDrawable) {
+                    NinePatchDrawable ninePatchDrawable = (NinePatchDrawable) drawable;
+                    ninePatchDrawable.setBounds(rect);
+                    ninePatchDrawable.draw(canvas);
+                } else {
+                    drawable.setBounds(rect);
+                    drawable.draw(canvas);
+                }
+            } else {
+                canvas.drawRect(mUnreachedRectF, mUnreachedBarPaint);
+            }
         }
 
         if (mIfDrawText) {
@@ -267,10 +323,10 @@ public class NumberProgressBar extends View {
 
     private void initializePainters() {
         mReachedBarPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mReachedBarPaint.setColor(mReachedBarColor);
+        mReachedBarPaint.setColor(mReachedBarBackgroundColor);
 
         mUnreachedBarPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mUnreachedBarPaint.setColor(mUnreachedBarColor);
+        mUnreachedBarPaint.setColor(mUnreachedBarBackgroundColor);
 
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(mTextColor);
@@ -347,12 +403,20 @@ public class NumberProgressBar extends View {
         return mTextSize;
     }
 
-    public int getUnreachedBarColor() {
-        return mUnreachedBarColor;
+    public int getmUnreachedBarBackgroundColor() {
+        return mUnreachedBarBackgroundColor;
     }
 
-    public int getReachedBarColor() {
-        return mReachedBarColor;
+    public int getmReachedBarBackgroundColor() {
+        return mReachedBarBackgroundColor;
+    }
+
+    public int getmUnreachedBarBackground() {
+        return mUnreachedBarBackgroundResId;
+    }
+
+    public int getmReachedBarBackground() {
+        return mReachedBarBackgroundResId;
     }
 
     public int getProgress() {
@@ -383,15 +447,27 @@ public class NumberProgressBar extends View {
         invalidate();
     }
 
-    public void setUnreachedBarColor(int barColor) {
-        this.mUnreachedBarColor = barColor;
-        mUnreachedBarPaint.setColor(mReachedBarColor);
+    public void setmUnreachedBarBackgroundColor(int color) {
+        this.mUnreachedBarBackgroundResId = 0;
+        this.mUnreachedBarBackgroundColor = color;
+        mUnreachedBarPaint.setColor(mUnreachedBarBackgroundColor);
         invalidate();
     }
 
-    public void setReachedBarColor(int progressColor) {
-        this.mReachedBarColor = progressColor;
-        mReachedBarPaint.setColor(mReachedBarColor);
+    public void setmReachedBarBackgroundColor(int color) {
+        this.mReachedBarBackgroundResId = 0;
+        this.mReachedBarBackgroundColor = color;
+        mReachedBarPaint.setColor(mReachedBarBackgroundColor);
+        invalidate();
+    }
+
+    public void setmUnreachedBarBackground(int resId) {
+        this.mUnreachedBarBackgroundResId = resId;
+        invalidate();
+    }
+
+    public void setmReachedBarBackground(int resId) {
+        this.mReachedBarBackgroundResId = resId;
         invalidate();
     }
 
@@ -459,8 +535,8 @@ public class NumberProgressBar extends View {
         bundle.putFloat(INSTANCE_TEXT_SIZE, getProgressTextSize());
         bundle.putFloat(INSTANCE_REACHED_BAR_HEIGHT, getReachedBarHeight());
         bundle.putFloat(INSTANCE_UNREACHED_BAR_HEIGHT, getUnreachedBarHeight());
-        bundle.putInt(INSTANCE_REACHED_BAR_COLOR, getReachedBarColor());
-        bundle.putInt(INSTANCE_UNREACHED_BAR_COLOR, getUnreachedBarColor());
+        bundle.putInt(INSTANCE_REACHED_BAR_BACKGROUND, getmReachedBarBackgroundColor());
+        bundle.putInt(INSTANCE_UNREACHED_BAR_BACKGROUND, getmUnreachedBarBackgroundColor());
         bundle.putInt(INSTANCE_MAX, getMax());
         bundle.putInt(INSTANCE_PROGRESS, getProgress());
         bundle.putString(INSTANCE_SUFFIX, getSuffix());
@@ -477,8 +553,8 @@ public class NumberProgressBar extends View {
             mTextSize = bundle.getFloat(INSTANCE_TEXT_SIZE);
             mReachedBarHeight = bundle.getFloat(INSTANCE_REACHED_BAR_HEIGHT);
             mUnreachedBarHeight = bundle.getFloat(INSTANCE_UNREACHED_BAR_HEIGHT);
-            mReachedBarColor = bundle.getInt(INSTANCE_REACHED_BAR_COLOR);
-            mUnreachedBarColor = bundle.getInt(INSTANCE_UNREACHED_BAR_COLOR);
+            mReachedBarBackgroundColor = bundle.getInt(INSTANCE_REACHED_BAR_BACKGROUND);
+            mUnreachedBarBackgroundColor = bundle.getInt(INSTANCE_UNREACHED_BAR_BACKGROUND);
             initializePainters();
             setMax(bundle.getInt(INSTANCE_MAX));
             setProgress(bundle.getInt(INSTANCE_PROGRESS));

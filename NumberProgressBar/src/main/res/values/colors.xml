@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="reached_bar_color">#3498DB</color>
+	<color name="unreached_bar_color">#CCCCCC</color>
+</resources>
