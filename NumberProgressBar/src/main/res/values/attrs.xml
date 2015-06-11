@@ -21,6 +21,22 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="CircleProgressBar">
+        <attr name="circle_progress" format="integer"/>
+        <attr name="circle_max" format="integer"/>
+
+        <attr name="circle_progress_unreached_color" format="color"/>
+        <attr name="circle_progress_reached_color" format="color"/>
+
+        <attr name="circle_progress_unreached_stroke" format="dimension"/>
+        <attr name="circle_progress_reached_stroke" format="dimension"/>
+
+        <attr name="circle_progress_bar_circle_size" format="dimension"/>
+
+        <attr name="circle_progress_text_size" format="dimension"/>
+        <attr name="circle_progress_text_color" format="color"/>
+    </declare-styleable>
+
     <!--<declare-styleable name="Themes">-->
         <!--<attr name="numberProgressBarStyle" format="reference"/>-->
     <!--</declare-styleable>-->
