@@ -6,7 +6,6 @@ import android.widget.Toast;
 
 import com.daimajia.numberprogressbar.NumberProgressBar;
 import com.daimajia.numberprogressbar.OnProgressBarListener;
-import com.widget.circleprogressbar.CircleProgressBar;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -15,7 +14,6 @@ public class NumberProgressBarActivity extends ActionBarActivity implements OnPr
 	private Timer timer;
 
 	private NumberProgressBar progressBar;
-	private CircleProgressBar circleProgressBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +22,6 @@ public class NumberProgressBarActivity extends ActionBarActivity implements OnPr
 
 		progressBar = (NumberProgressBar) findViewById(R.id.numberbar1);
 		progressBar.setOnProgressBarListener(this);
-		circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress_bar);
-		circleProgressBar.setProgressBarListener(new OnProgressBarListener() {
-			@Override
-			public void onProgressChange(int current, int max) {
-				if (current == max) {
-					circleProgressBar.setProgress(0);
-				}
-			}
-		});
 		timer = new Timer();
 		timer.schedule(new TimerTask() {
 			@Override
@@ -41,7 +30,6 @@ public class NumberProgressBarActivity extends ActionBarActivity implements OnPr
 					@Override
 					public void run() {
 						progressBar.incrementProgressBy(1);
-						circleProgressBar.incrementProgressBy(1);
 					}
 				});
 			}

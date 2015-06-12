@@ -1,43 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="NumberProgressBar">
-        <attr name="progress" format="integer"/>
-        <attr name="max" format="integer"/>
+	<declare-styleable name="NumberProgressBar">
+		<attr name="progress" format="integer"/>
+		<attr name="max" format="integer"/>
 
-        <attr name="progress_unreached_color" format="color"/>
-        <attr name="progress_reached_color" format="color"/>
+		<attr name="progress_unreached_color" format="color"/>
+		<attr name="progress_reached_color" format="color"/>
 
-        <attr name="progress_reached_bar_height" format="dimension"/>
-        <attr name="progress_unreached_bar_height" format="dimension"/>
+		<attr name="progress_reached_bar_height" format="dimension"/>
+		<attr name="progress_unreached_bar_height" format="dimension"/>
 
-        <attr name="progress_text_size" format="dimension"/>
-        <attr name="progress_text_color" format="color"/>
+		<attr name="progress_text_size" format="dimension"/>
+		<attr name="progress_text_color" format="color"/>
 
-        <attr name="progress_text_offset" format="dimension"/>
+		<attr name="progress_text_offset" format="dimension"/>
 
-        <attr name="progress_text_visibility" format="enum">
-            <enum name="visible" value="0"/>
-            <enum name="invisible" value="1"/>
-        </attr>
-    </declare-styleable>
+		<attr name="progress_text_visibility" format="enum">
+			<enum name="visible" value="0"/>
+			<enum name="invisible" value="1"/>
+		</attr>
+	</declare-styleable>
 
-    <declare-styleable name="CircleProgressBar">
-        <attr name="circle_progress" format="integer"/>
-        <attr name="circle_max" format="integer"/>
+	<!-- TODO: declare attributes -->
+	<declare-styleable name="CircleProgressBar">
+		<attr name="circle_progress" format="integer"/>
+		<attr name="circle_max" format="integer"/>
+		<!-- " -->
+		<!-- circle_progress_reached_color -->
+		<!-- circle_progress_unreached_stroke -->
+		<!-- circle_progress_reached_stroke -->
+		<!-- circle_progress_bar_size -->
+		<!-- circle_progress_text_size -->
+		<!-- circle_progress_text_color -->
+	</declare-styleable>
 
-        <attr name="circle_progress_unreached_color" format="color"/>
-        <attr name="circle_progress_reached_color" format="color"/>
-
-        <attr name="circle_progress_unreached_stroke" format="dimension"/>
-        <attr name="circle_progress_reached_stroke" format="dimension"/>
-
-        <attr name="circle_progress_bar_circle_size" format="dimension"/>
-
-        <attr name="circle_progress_text_size" format="dimension"/>
-        <attr name="circle_progress_text_color" format="color"/>
-    </declare-styleable>
-
-    <!--<declare-styleable name="Themes">-->
-        <!--<attr name="numberProgressBarStyle" format="reference"/>-->
-    <!--</declare-styleable>-->
 </resources>

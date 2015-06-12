@@ -25,12 +25,12 @@
 			custom:progress_reached_bar_height="3dp"
 			custom:progress_unreached_bar_height="1.5dp"/>
 
-	<com.widget.circleprogressbar.CircleProgressBar
-			android:id="@+id/circle_progress_bar"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:paddingLeft="120dp"
-			android:paddingTop="60dp"
-			custom:circle_progress_reached_color="#3498DB"/>
+	<!--<com.widget.circleprogressbar.CircleProgressBar-->
+			<!--android:id="@+id/circle_progress_bar"-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:paddingLeft="120dp"-->
+			<!--android:paddingTop="60dp"-->
+			<!--custom:circle_progress_reached_color="#3498DB"/>-->
 
 </LinearLayout>
