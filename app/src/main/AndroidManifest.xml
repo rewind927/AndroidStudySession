@@ -22,6 +22,8 @@
 				android:name="com.johnny.materialripplelayout.activity.RippleActivity"/>
 		<activity
 				android:name="com.daimajia.numberprogressbar.example.NumberProgressBarActivity"/>
+        <activity
+                android:name="is.arontibo.library.sample.ElasticDownloadActivity"/>
 	</application>
 
 </manifest>

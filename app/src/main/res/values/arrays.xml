@@ -4,5 +4,6 @@
 		<item>CircularFloatingActionButtonMenu</item>
 		<item>MaterialRippleLayout</item>
 		<item>NumberProgressBar</item>
+        <item>ElasticDownload</item>
 	</string-array>
 </resources>
