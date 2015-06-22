@@ -25,4 +25,5 @@ dependencies {
 	compile project(':circluarfloatingactionmenu')
 	compile project(':materialripplelayout')
 	compile project(':NumberProgressBar')
+    compile project(':elasticdownload')
 }
