@@ -9,7 +9,17 @@
         android:id="@+id/elastic_download_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        elastic:backgroundColor="#00796B"
-        android:layout_centerInParent="true"/>
+        elastic:backgroundColor="#eb533f"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/galaxy_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="100dp"
+        android:paddingTop="100dp"
+        android:src="@drawable/agalaxy_start_rotation"/>
 
 </RelativeLayout>

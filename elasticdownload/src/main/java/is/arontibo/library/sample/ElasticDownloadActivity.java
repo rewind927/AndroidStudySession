@@ -1,10 +1,12 @@
 package is.arontibo.library.sample;
 
+import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import is.arontibo.library.ElasticDownloadView;
 import is.arontibo.library.ProgressDownloadView;
@@ -14,12 +16,15 @@ import is.arontibo.library.R;
 public class ElasticDownloadActivity extends ActionBarActivity {
 
     private ElasticDownloadView mElasticDownloadView;
+    private ImageView galaxyView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elasticdownload);
         mElasticDownloadView = (ElasticDownloadView) findViewById(R.id.elastic_download_view);
+        galaxyView = (ImageView) findViewById(R.id.galaxy_view);
+
     }
 
 
@@ -77,6 +82,21 @@ public class ElasticDownloadActivity extends ActionBarActivity {
                     mElasticDownloadView.fail();
                 }
             }, 3*ProgressDownloadView.ANIMATION_DURATION_BASE);
+
+            return true;
+        } else if (id == R.id.action_run_galaxy_rotation) {
+            galaxyView.setImageResource(R.drawable.agalaxy_start_rotation);
+            ((Animatable) galaxyView.getDrawable()).start();
+
+            return true;
+        } else if (id == R.id.action_run_galaxy_color) {
+            galaxyView.setImageResource(R.drawable.agalaxy_start_color);
+            ((Animatable) galaxyView.getDrawable()).start();
+
+            return true;
+        } else if (id == R.id.action_run_galaxy_transform) {
+            galaxyView.setImageResource(R.drawable.agalaxy_start_transform);
+            ((Animatable) galaxyView.getDrawable()).start();
 
             return true;
         }

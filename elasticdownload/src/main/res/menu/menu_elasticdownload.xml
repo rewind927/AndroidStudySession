@@ -5,4 +5,10 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_run_fail_animation" android:title="@string/action_run_fail_animation"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_run_galaxy_rotation" android:title="@string/action_run_galaxy_rotation"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_run_galaxy_color" android:title="@string/action_run_galaxy_color"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_run_galaxy_transform" android:title="@string/action_run_galaxy_transform"
+          android:orderInCategory="100" app:showAsAction="never" />
 </menu>
