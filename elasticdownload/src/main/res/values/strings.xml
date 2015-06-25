@@ -43,8 +43,27 @@
                                L 6 202
                                Q 6 198 8 198</string>
 
+    <string name="upper_data">M 195 235
+                            L 245 195
+                            Q 250 190 255 195
+                            L 305 235
+                            Q 310 240 300 240
+                            L 285 240
+                            Q 280 240 280 245
+                            L 280 310
+                            Q 280 315 275 315
+                            L 225 315
+                            Q 220 315 220 310
+                            L 220 245
+                            Q 220 240 215 240
+                            L 200 240
+                            Q 190 240 195 235</string>
+
     <string name="action_run_success_animation">Run success animation</string>
     <string name="action_run_fail_animation">Run fail animation</string>
+    <string name="action_run_galaxy_rotation">Run galaxy rotation</string>
+    <string name="action_run_galaxy_color">Run galaxy color</string>
+    <string name="action_run_galaxy_transform">Run galaxy transform</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_vector_test">VectorTestActivity</string>
 </resources>
