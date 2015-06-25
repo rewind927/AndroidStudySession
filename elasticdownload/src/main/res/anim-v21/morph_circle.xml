@@ -5,4 +5,4 @@
     android:propertyName="pathData"
     android:valueFrom="@string/circle_data"
     android:valueTo="@string/line_data"
-    android:valueType="pathType"></objectAnimator>
+    android:valueType="pathType" />

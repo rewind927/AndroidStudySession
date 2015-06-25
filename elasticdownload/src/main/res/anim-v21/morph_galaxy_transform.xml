@@ -4,5 +4,4 @@
     android:valueFrom="m -25 0 a 25,25 0 1,0 50,0 a 25,25 0 1,0 -50,0"
     android:valueTo="m -25 0 a 25,50 0 1,0 50,0 a 25,50 0 1,0 -50,0"
     android:valueType="pathType"
-    android:duration="2500">
-</objectAnimator>
+    android:duration="2500" />

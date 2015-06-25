@@ -3,5 +3,4 @@
     android:propertyName="fillColor"
     android:valueFrom="#FFFF8000"
     android:valueTo="#FFFF0000"
-    android:duration="2500">
-</objectAnimator>
+    android:duration="2500" />
