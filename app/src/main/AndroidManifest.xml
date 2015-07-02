@@ -24,6 +24,9 @@
 				android:name="com.daimajia.numberprogressbar.example.NumberProgressBarActivity"/>
         <activity
                 android:name="is.arontibo.library.sample.ElasticDownloadActivity"/>
+
+		<activity
+				android:name="com.melnykov.fab.sample.FloatingActionButtonActivity"/>
 	</application>
 
 </manifest>

@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
+import com.melnykov.fab.sample.FloatingActionButtonActivity;
 
 import is.arontibo.library.sample.ElasticDownloadActivity;
 import kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity;
@@ -66,6 +67,9 @@ public class MainActivity extends ActionBarActivity {
                 case 3:
                     startActivity(new Intent(getActivity(), ElasticDownloadActivity.class));
                     break;
+				case 4:
+					startActivity(new Intent(getActivity(), FloatingActionButtonActivity.class));
+					break;
 			}
 		}
 	}

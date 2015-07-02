@@ -1,1 +1,1 @@
-include ':app', ':circluarfloatingactionmenu', ':materialripplelayout', ':NumberProgressBar', ':elasticdownload'
+include ':app', ':circluarfloatingactionmenu', ':materialripplelayout', ':NumberProgressBar', ':elasticdownload', ':floatingactionbutton'
