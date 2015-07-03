@@ -30,7 +30,7 @@ Date | Speaker | Topic | Slide |
 2015/5/22|Johnny|[Material Ripple Layout](https://github.com/balysv/material-ripple)|[Material Ripple Layout](https://docs.google.com/presentation/d/1kEzZ6aU3xz3cymKeYtBXYDbuCx_MmXdOgThP6kWSTco/edit?usp=sharing)
 2015/6/12|Ethan|[NumberProgressBar](https://github.com/daimajia/NumberProgressBar)|[NumberProgressBar](https://docs.google.com/presentation/d/1KTfT6TdepP0bRzNJZ1EHwytHfKshQHOiQQKfgV39JZM/edit?usp=sharing)
 2015/6/19|Kami|[ElasticDownload](https://github.com/Tibolte/ElasticDownload)|[ElasticDownload](https://docs.google.com/presentation/d/1UnmET-rgy9pLdl-Ny7_6HNkivXz7XgzoaCztY025GzY/edit?usp=sharing)
-2015/6/26|Ken|[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|
+2015/6/26|Ken|[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|[FloatingActionButton](https://docs.google.com/presentation/d/1SCzTknaBmi1EC-lzSH8IqLko0KpwICkRGfUWj9VjIJc/edit?usp=sharing)
 2015/7/3	|Daniel	|[AndroidViewHover](	https://github.com/daimajia/AndroidViewHover)|
 2015/7/10	|Zoey	|[GoogleProgressBar](	https://github.com/jpardogo/GoogleProgressBar)|
 2015/7/17	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|
