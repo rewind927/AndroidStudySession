@@ -6,5 +6,6 @@
 		<item>NumberProgressBar</item>
         <item>ElasticDownload</item>
 		<item>FloatingActionButton</item>
+		<item>AndroidViewHolder</item>
 	</string-array>
 </resources>
