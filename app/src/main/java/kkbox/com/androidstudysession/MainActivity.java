@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.daimajia.androidviewhover.activity.AndroidViewHolderActivity;
 import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.melnykov.fab.sample.FloatingActionButtonActivity;
@@ -69,6 +70,9 @@ public class MainActivity extends ActionBarActivity {
                     break;
 				case 4:
 					startActivity(new Intent(getActivity(), FloatingActionButtonActivity.class));
+					break;
+				case 5:
+					startActivity(new Intent(getActivity(), AndroidViewHolderActivity.class));
 					break;
 			}
 		}
