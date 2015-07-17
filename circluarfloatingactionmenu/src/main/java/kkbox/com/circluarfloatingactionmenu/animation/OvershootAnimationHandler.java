@@ -32,6 +32,7 @@ public class OvershootAnimationHandler extends MenuAnimationHandler {
 
     @Override
     public void animateMenuOpening(Point center) {
+        //TODO Modify animation. Disable alpha animation  and adjust OvershootInterpolator parameter.
         super.animateMenuOpening(center);
 
         setAnimating(true);
@@ -41,6 +42,7 @@ public class OvershootAnimationHandler extends MenuAnimationHandler {
 
             menu.getSubActionItems().get(i).view.setScaleX(0);
             menu.getSubActionItems().get(i).view.setScaleY(0);
+            menu.getSubActionItems().get(i).view.setAlpha(0);
 
             PropertyValuesHolder pvhX = PropertyValuesHolder.ofFloat(View.TRANSLATION_X, menu.getSubActionItems().get(i).x - center.x +
 		            menu.getSubActionItems().get(i).width / 2);
@@ -49,10 +51,11 @@ public class OvershootAnimationHandler extends MenuAnimationHandler {
             PropertyValuesHolder pvhR = PropertyValuesHolder.ofFloat(View.ROTATION, 720);
             PropertyValuesHolder pvhsX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1);
             PropertyValuesHolder pvhsY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1);
+            PropertyValuesHolder pvhA = PropertyValuesHolder.ofFloat(View.ALPHA, 1);
 
-            final ObjectAnimator animation = ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view, pvhX, pvhY, pvhR, pvhsX, pvhsY);
+            final ObjectAnimator animation = ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view, pvhX, pvhY, pvhR, pvhsX, pvhsY, pvhA);
             animation.setDuration(DURATION);
-            animation.setInterpolator(new OvershootInterpolator(9f));
+            animation.setInterpolator(new OvershootInterpolator(0.9f));
             animation.addListener(new SubActionItemAnimationListener(menu.getSubActionItems().get(i), ActionType.OPENING));
 
             if(i == 0) {

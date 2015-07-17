@@ -139,6 +139,7 @@ public class MenuWithFABActivity extends ActionBarActivity {
                 .addSubActionView(lCSubBuilder.setContentView(lcIcon4, blueContentParams).build())
                 .addSubActionView(lCSubBuilder.setContentView(lcIcon5, blueContentParams).build())
                 .setRadius(redActionMenuRadius)
+                //TODO implement OvershootAnimationHandler and BounceAnimationHandler
                 .setAnimationHandler(new OvershootAnimationHandler())
                 .setStartAngle(70)
                 .setEndAngle(-70)
