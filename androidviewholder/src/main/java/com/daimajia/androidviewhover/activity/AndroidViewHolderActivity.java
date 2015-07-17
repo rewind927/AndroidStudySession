@@ -2,9 +2,12 @@ package com.daimajia.androidviewhover.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.graphics.Palette;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +22,7 @@ import com.daimajia.androidviewhover.BlurLayout;
 public class AndroidViewHolderActivity extends ActionBarActivity {
 
     private Context mContext;
-    private BlurLayout mSampleLayout, mSampleLayout2, mSampleLayout3, mSampleLayout4;
+    private BlurLayout mSampleLayout, mSampleLayout2, mSampleLayout3, mSampleLayout4, mSampleLayout5, mSampleLayout6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,7 @@ public class AndroidViewHolderActivity extends ActionBarActivity {
         BlurLayout.setGlobalDefaultDuration(450);
         mSampleLayout = (BlurLayout)findViewById(R.id.blur_layout);
         View hover = LayoutInflater.from(mContext).inflate(R.layout.hover_sample, null);
-        hover.findViewById(R.id.heart).setOnClickListener(new View.OnClickListener() {
+	    hover.findViewById(R.id.heart).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 YoYo.with(Techniques.Tada)
@@ -49,16 +52,13 @@ public class AndroidViewHolderActivity extends ActionBarActivity {
         mSampleLayout.addChildAppearAnimator(hover, R.id.heart, Techniques.FlipInX, 550, 0);
         mSampleLayout.addChildAppearAnimator(hover, R.id.share, Techniques.FlipInX, 550, 250);
         mSampleLayout.addChildAppearAnimator(hover, R.id.more, Techniques.FlipInX, 550, 500);
-
         mSampleLayout.addChildDisappearAnimator(hover, R.id.heart, Techniques.FlipOutX, 550, 500);
         mSampleLayout.addChildDisappearAnimator(hover, R.id.share, Techniques.FlipOutX, 550, 250);
         mSampleLayout.addChildDisappearAnimator(hover, R.id.more, Techniques.FlipOutX, 550, 0);
-
         mSampleLayout.addChildAppearAnimator(hover, R.id.description, Techniques.FadeInUp);
         mSampleLayout.addChildDisappearAnimator(hover, R.id.description, Techniques.FadeOutDown);
 
         //sample 2
-
         mSampleLayout2 = (BlurLayout)findViewById(R.id.blur_layout2);
         View hover2 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample2, null);
         hover2.findViewById(R.id.avatar).setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,6 @@ public class AndroidViewHolderActivity extends ActionBarActivity {
             }
         });
         mSampleLayout2.setHoverView(hover2);
-
         mSampleLayout2.addChildAppearAnimator(hover2, R.id.description, Techniques.FadeInUp);
         mSampleLayout2.addChildDisappearAnimator(hover2, R.id.description, Techniques.FadeOutDown);
         mSampleLayout2.addChildAppearAnimator(hover2, R.id.avatar, Techniques.DropOut, 1200);
@@ -120,6 +119,58 @@ public class AndroidViewHolderActivity extends ActionBarActivity {
                 startActivity(Intent.createChooser(emailIntent, "Send mail..."));
             }
         });
+
+
+	    //sample 5
+	    mSampleLayout5 = (BlurLayout)findViewById(R.id.blur_layout5);
+	    final View layout5 = findViewById(R.id.source5);
+	    Palette.from(BitmapFactory.decodeResource(getResources(),
+			    R.drawable.album)).generate(new Palette.PaletteAsyncListener() {
+		    @Override
+		    public void onGenerated(Palette palette) {
+			    layout5.setBackgroundColor(palette.getDarkVibrantColor(palette.getDarkMutedColor(Color.DKGRAY)));
+		    }
+	    });
+	    View hover5 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample5, null);
+	    mSampleLayout5.setHoverView(hover5);
+	    mSampleLayout5.addChildAppearAnimator(hover5, R.id.button_play, Techniques.BounceInLeft);
+	    mSampleLayout5.addChildDisappearAnimator(hover5, R.id.button_play, Techniques.SlideOutLeft);
+	    mSampleLayout5.addChildAppearAnimator(hover5, R.id.content, Techniques.BounceIn);
+	    mSampleLayout5.addChildDisappearAnimator(hover5, R.id.content, Techniques.FadeOutUp);
+	    mSampleLayout5.enableZoomBackground(true);
+	    mSampleLayout5.setBlurDuration(600);
+	    hover5.findViewById(R.id.button_play).setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+			    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("kkbox://playlist_144_186906"));
+			    startActivity(intent);
+		    }
+	    });
+
+	    //sample 6
+	    mSampleLayout6 = (BlurLayout)findViewById(R.id.blur_layout6);
+	    final View layout6 = findViewById(R.id.source6);
+	    Palette.from(BitmapFactory.decodeResource(getResources(),
+			    R.drawable.blur)).generate(new Palette.PaletteAsyncListener() {
+		    @Override
+		    public void onGenerated(Palette palette) {
+			    layout6.setBackgroundColor(palette.getDarkVibrantColor(palette.getDarkMutedColor(Color.DKGRAY)));
+		    }
+	    });
+	    View hover6 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample6, null);
+	    mSampleLayout6.setHoverView(hover6);
+	    mSampleLayout6.addChildAppearAnimator(hover6, R.id.button_play, Techniques.FadeIn);
+	    mSampleLayout6.addChildDisappearAnimator(hover6, R.id.button_play, Techniques.FadeOut);
+	    mSampleLayout6.addChildAppearAnimator(hover6, R.id.content, Techniques.Wave);
+	    mSampleLayout6.addChildDisappearAnimator(hover6, R.id.content, Techniques.FadeOutDown);
+	    mSampleLayout6.setBlurDuration(600);
+	    hover6.findViewById(R.id.button_play).setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+			    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("kkbox://playspecial_548_758"));
+			    startActivity(intent);
+		    }
+	    });
     }
 
 

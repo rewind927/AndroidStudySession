@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/content"
+        android:background="#66000000"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:text="一年七個月唱遊『感官世界』 林宥嘉音樂路程新進化與心豐收 開啟『美妙生活』新視野..."
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:id="@+id/button_play"
+                android:src="@drawable/selector_btn_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>
