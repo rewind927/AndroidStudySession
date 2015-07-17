@@ -160,7 +160,7 @@ public class AndroidViewHolderActivity extends ActionBarActivity {
 	    View hover6 = LayoutInflater.from(mContext).inflate(R.layout.hover_sample6, null);
 	    mSampleLayout6.setHoverView(hover6);
 	    mSampleLayout6.addChildAppearAnimator(hover6, R.id.button_play, Techniques.FadeIn);
-	    mSampleLayout6.addChildDisappearAnimator(hover6, R.id.button_play, Techniques.FadeOut);
+	    mSampleLayout6.addChildDisappearAnimator(hover6, R.id.button_play, Techniques.FadeOutDown);
 	    mSampleLayout6.addChildAppearAnimator(hover6, R.id.content, Techniques.Wave);
 	    mSampleLayout6.addChildDisappearAnimator(hover6, R.id.content, Techniques.FadeOutDown);
 	    mSampleLayout6.setBlurDuration(600);
