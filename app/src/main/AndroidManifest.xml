@@ -22,14 +22,14 @@
 				android:name="com.johnny.materialripplelayout.activity.RippleActivity"/>
 		<activity
 				android:name="com.daimajia.numberprogressbar.example.NumberProgressBarActivity"/>
-        <activity
-                android:name="is.arontibo.library.sample.ElasticDownloadActivity"/>
-
+		<activity
+				android:name="is.arontibo.library.sample.ElasticDownloadActivity"/>
 		<activity
 				android:name="com.melnykov.fab.sample.FloatingActionButtonActivity"/>
-
 		<activity
 				android:name="com.daimajia.androidviewhover.activity.AndroidViewHolderActivity"/>
+		<activity
+				android:name="com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity"/>
 	</application>
 
 </manifest>

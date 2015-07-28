@@ -30,4 +30,5 @@ dependencies {
     compile project(':elasticdownload')
 	compile project(':floatingactionbutton')
 	compile project(':androidviewholder')
+	compile project(':googleProgressBar')
 }

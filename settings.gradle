@@ -1,1 +1,1 @@
-include ':app', ':circluarfloatingactionmenu', ':materialripplelayout', ':NumberProgressBar', ':elasticdownload', ':floatingactionbutton', ':androidviewholder'
+include ':app', ':circluarfloatingactionmenu', ':materialripplelayout', ':NumberProgressBar', ':elasticdownload', ':floatingactionbutton', ':androidviewholder', ':googleProgressBar'
