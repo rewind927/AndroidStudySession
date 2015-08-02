@@ -31,4 +31,5 @@ dependencies {
 	compile project(':floatingactionbutton')
 	compile project(':androidviewholder')
 	compile project(':googleProgressBar')
+	compile project(':phoenix')
 }
