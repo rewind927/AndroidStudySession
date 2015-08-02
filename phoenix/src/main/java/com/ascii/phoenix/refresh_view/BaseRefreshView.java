@@ -7,8 +7,6 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 
-import com.ascii.phoenix.PullToRefreshView;
-
 public abstract class BaseRefreshView extends Drawable implements Drawable.Callback, Animatable {
 
     private PullToRefreshView mRefreshLayout;

@@ -1,4 +1,4 @@
-package com.ascii.phoenix;
+package com.ascii.phoenix.refresh_view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,6 +17,7 @@ import android.view.animation.Transformation;
 import android.widget.AbsListView;
 import android.widget.ImageView;
 
+import com.ascii.phoenix.R;
 import com.ascii.phoenix.refresh_view.BaseRefreshView;
 import com.ascii.phoenix.refresh_view.SunRefreshView;
 import com.ascii.phoenix.util.Utils;
