@@ -8,5 +8,6 @@
 		<item>FloatingActionButton</item>
 		<item>AndroidViewHolder</item>
 		<item>GoogleProgressBar</item>
+		<item>Phoenix</item>
 	</string-array>
 </resources>

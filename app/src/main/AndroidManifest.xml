@@ -30,6 +30,12 @@
 				android:name="com.daimajia.androidviewhover.activity.AndroidViewHolderActivity"/>
 		<activity
 				android:name="com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity"/>
+		<activity
+				android:name="com.ascii.phoenix.PhoenixActivity"/>
+		<activity
+				android:name="com.ascii.phoenix.PhoenixDemoActivity"/>
+		<activity
+				android:name="com.ascii.phoenix.PhoenixPracticeActivity"/>
 	</application>
 
 </manifest>
