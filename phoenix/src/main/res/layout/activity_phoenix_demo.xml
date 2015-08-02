@@ -4,7 +4,7 @@
 				android:layout_height="match_parent"
 				tools:context="com.ascii.phoenix.PhoenixDemoActivity">
 
-	<com.ascii.phoenix.PullToRefreshView
+	<com.ascii.phoenix.refresh_view.PullToRefreshView
 		android:id="@+id/pull_to_refresh"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
@@ -17,6 +17,6 @@
 			android:dividerHeight="0dp"
 			android:fadingEdge="none"/>
 
-	</com.ascii.phoenix.PullToRefreshView>
+	</com.ascii.phoenix.refresh_view.PullToRefreshView>
 
 </RelativeLayout>

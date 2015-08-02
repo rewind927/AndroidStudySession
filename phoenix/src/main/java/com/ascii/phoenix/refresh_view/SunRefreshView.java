@@ -14,7 +14,6 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
-import com.ascii.phoenix.PullToRefreshView;
 import com.ascii.phoenix.R;
 import com.ascii.phoenix.util.Utils;
 
