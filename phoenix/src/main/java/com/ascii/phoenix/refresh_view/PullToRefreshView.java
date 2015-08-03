@@ -31,6 +31,7 @@ public class PullToRefreshView extends ViewGroup {
     private static final float DECELERATE_INTERPOLATION_FACTOR = 2f;
 
     public static final int STYLE_SUN = 0;
+    public static final int STYLE_MOON = 1;
     public static final int MAX_OFFSET_ANIMATION_DURATION = 700;
 
     private static final int INVALID_POINTER = -1;
@@ -86,6 +87,9 @@ public class PullToRefreshView extends ViewGroup {
         switch (type) {
             case STYLE_SUN:
                 mBaseRefreshView = new SunRefreshView(getContext(), this);
+                break;
+            case STYLE_MOON:
+                mBaseRefreshView = new MoonRefreshView(getContext(), this);
                 break;
             default:
                 throw new InvalidParameterException("Type does not exist");

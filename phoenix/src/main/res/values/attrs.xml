@@ -3,6 +3,7 @@
     <declare-styleable name="RefreshView">
         <attr name="view_type" format="enum">
             <enum name="sun" value="0" />
+            <enum name="moon" value="1" />
         </attr>
     </declare-styleable>
 </resources>
