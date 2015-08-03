@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PhoenixDemoActivity extends ActionBarActivity {
+public class PhoenixMoonActivity extends ActionBarActivity {
 
 	public static final int REFRESH_DELAY = 2000;
 
@@ -30,7 +30,7 @@ public class PhoenixDemoActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_phoenix_demo);
+		setContentView(R.layout.activity_phoenix_moon);
 
 		initData();
 
