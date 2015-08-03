@@ -317,5 +317,4 @@ public class SunRefreshView extends BaseRefreshView implements Animatable {
         mAnimation.setInterpolator(LINEAR_INTERPOLATOR);
         mAnimation.setDuration(ANIMATION_DURATION);
     }
-
 }
