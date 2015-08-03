@@ -35,7 +35,7 @@
 		<activity
 				android:name="com.ascii.phoenix.PhoenixDemoActivity"/>
 		<activity
-				android:name="com.ascii.phoenix.PhoenixPracticeActivity"/>
+				android:name="com.ascii.phoenix.PhoenixMoonActivity"/>
 	</application>
 
 </manifest>

@@ -19,7 +19,7 @@
             android:label="@string/title_activity_demo" >
         </activity>
         <activity
-            android:name=".PhoenixPracticeActivity"
+            android:name=".PhoenixMoonActivity"
             android:label="@string/title_activity_practice" >
         </activity>
     </application>

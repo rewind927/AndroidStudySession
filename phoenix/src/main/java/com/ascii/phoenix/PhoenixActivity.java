@@ -18,6 +18,10 @@ public class PhoenixActivity extends ActionBarActivity {
 	}
 
 	public void onPracticeButtonClicked(View view) {
-		startActivity(new Intent(this, PhoenixPracticeActivity.class));
+		startActivity(new Intent(this, PhoenixMoonActivity.class));
+	}
+
+	public void onDropDownToolsButtonClicked(View view) {
+		startActivity(new Intent(this, DropDownToolsActivity.class));
 	}
 }
