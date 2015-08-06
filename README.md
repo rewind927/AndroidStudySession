@@ -33,7 +33,7 @@ Date | Speaker | Topic | Slide |
 2015/7/3|Ken|[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|[FloatingActionButton](https://docs.google.com/presentation/d/1SCzTknaBmi1EC-lzSH8IqLko0KpwICkRGfUWj9VjIJc/edit?usp=sharing)
 2015/7/17	|Daniel	|[AndroidViewHover](https://github.com/daimajia/AndroidViewHover)|[AndroidViewHover](https://docs.google.com/presentation/d/1LcC8h51e8DFe_FmDdgB5Pv_DfrMX4mSszC54mZHOjXo/edit?usp=sharing)
 2015/7/24	|Zoey	|[GoogleProgressBar](	https://github.com/jpardogo/GoogleProgressBar)|[GoogleProgressBar] (https://drive.google.com/open?id=0BwCXq1hJTV8cUVNWc0tYa0ptelk)
-2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|
+2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|[Pull-to-Refresh-Phoenix](https://docs.google.com/document/d/1YS0LYl4Q8Hjpc4pEdBJEuhe93rDl2tHYXPguvcHjUlU/edit?usp=sharing)
 2015/8/7	|Karen	|[SwipeMenuListView](	https://github.com/baoyongzhang/SwipeMenuListView)|
 2015/8/14	|Wendy	|[AsymmetricGridView](	https://github.com/felipecsl/AsymmetricGridView)|
 2015/8/21	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|
