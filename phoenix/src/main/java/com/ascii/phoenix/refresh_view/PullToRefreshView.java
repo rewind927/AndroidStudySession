@@ -88,9 +88,6 @@ public class PullToRefreshView extends ViewGroup {
             case STYLE_SUN:
                 mBaseRefreshView = new SunRefreshView(getContext(), this);
                 break;
-            case STYLE_MOON:
-                mBaseRefreshView = new MoonRefreshView(getContext(), this);
-                break;
             default:
                 throw new InvalidParameterException("Type does not exist");
         }
