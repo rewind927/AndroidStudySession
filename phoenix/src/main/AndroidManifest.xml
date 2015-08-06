@@ -22,6 +22,10 @@
             android:name=".PhoenixMoonActivity"
             android:label="@string/title_activity_practice" >
         </activity>
+        <activity
+            android:name=".DropDownToolsActivity"
+            android:label="@string/title_activity_dropdown_tools" >
+        </activity>
     </application>
 
 </manifest>
