@@ -36,6 +36,8 @@
 				android:name="com.ascii.phoenix.PhoenixDemoActivity"/>
 		<activity
 				android:name="com.ascii.phoenix.PhoenixMoonActivity"/>
+		<activity
+			    android:name="com.ascii.phoenix.DropDownToolsActivity"/>
 	</application>
 
 </manifest>
