@@ -4,11 +4,5 @@
         <attr name="view_type" format="enum">
             <enum name="sun" value="0" />
         </attr>
-        <attr name="view_position" format="enum">
-            <enum name="refresh" value="0" />
-            <enum name="target" value="1" />
-        </attr>
-        <attr name="refresh_view" format="reference" />
-        <attr name="target_view" format="reference" />
     </declare-styleable>
 </resources>

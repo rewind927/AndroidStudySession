@@ -2,6 +2,7 @@ package com.ascii.phoenix.toolview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.ViewCompat;
@@ -14,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.Transformation;
+import android.widget.ImageView;
 
 import com.ascii.phoenix.R;
 import com.ascii.phoenix.util.Utils;
@@ -48,21 +50,15 @@ public class DropDownToolsView extends ViewGroup {
 	private int mTargetPaddingRight;
 	private int mTargetPaddingLeft;
 
-	private int mRefreshViewId;
-	private int mTargetViewId;
-
 	public DropDownToolsView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
 		mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
 		mTotalDragDistance = Utils.convertDpToPixel(context, DRAG_MAX_DISTANCE);
 
-		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RefreshView);
-		mRefreshViewId = a.getResourceId(R.styleable.RefreshView_refresh_view, -1);
-		mTargetViewId = a.getResourceId(R.styleable.RefreshView_target_view, -1);
-		a.recycle();
-
-		ensureTarget();
+		mRefreshView = new ImageView(context);
+		mRefreshView.setBackgroundColor(Color.argb(0xFF, 0, 0xAE, 0xD8));
+		addView(mRefreshView);
 
 		setWillNotDraw(false);
 		ViewCompat.setChildrenDrawingOrderEnabled(this, true);
@@ -90,10 +86,7 @@ public class DropDownToolsView extends ViewGroup {
 		if (getChildCount() > 0) {
 			for (int i = 0; i < getChildCount(); i++) {
 				View child = getChildAt(i);
-				int id = child.getId();
-				if (id == mRefreshViewId) {
-					mRefreshView = child;
-				} else if (id == mTargetViewId) {
+				if (child != mRefreshView) {
 					mTarget = child;
 					mTargetPaddingBottom = mTarget.getPaddingBottom();
 					mTargetPaddingLeft = mTarget.getPaddingLeft();
