@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.karen.processbutton.ActionProcessButton;
-import com.karen.processbutton.PracticProcessButton;
+import com.karen.processbutton.PracticeProcessButton;
 import com.karen.processbutton.ProcessButton;
 import com.karen.processbutton.R;
 import com.karen.processbutton.util.ProgressGenerator;
@@ -19,7 +19,7 @@ public class ProcessButtonActivity extends ActionBarActivity implements Progress
 
 	private TextView labelMode;
 	private ActionProcessButton buttonSignIn;
-	private PracticProcessButton buttonPractice;
+	private PracticeProcessButton buttonPractice;
 	private EditText textEmail;
 	private EditText textPassword;
 	private ProgressGenerator progressGenerator;
@@ -55,7 +55,7 @@ public class ProcessButtonActivity extends ActionBarActivity implements Progress
 		progressGenerator = new ProgressGenerator(this);
 		buttonSignIn.setOnClickListener(buttonSignInClickListener);
 
-		buttonPractice = (PracticProcessButton) findViewById(R.id.button_practice);
+		buttonPractice = (PracticeProcessButton) findViewById(R.id.button_practice);
 		buttonPractice.setOnClickListener(buttonLoginClickListener);
 	}
 
