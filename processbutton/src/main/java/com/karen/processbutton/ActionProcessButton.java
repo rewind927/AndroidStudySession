@@ -11,6 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AnimationUtils;
+import android.view.animation.BounceInterpolator;
 import android.view.animation.Interpolator;
 
 public class ActionProcessButton extends ProcessButton {
@@ -92,8 +93,8 @@ public class ActionProcessButton extends ProcessButton {
         float scale = (float) getProgress() / (float) getMaxProgress();
         float indicatorWidth = (float) getMeasuredWidth() * scale;
         double indicatorHeightPercent = 0.05;
-        int bottom = (int) (getMeasuredHeight() - getMeasuredHeight() * indicatorHeightPercent);
-        getProgressDrawable().setBounds(0, bottom, (int) indicatorWidth, getMeasuredHeight());
+        int top = (int) (getMeasuredHeight() - getMeasuredHeight() * indicatorHeightPercent);
+        getProgressDrawable().setBounds(0, top, (int) indicatorWidth, getMeasuredHeight());
         getProgressDrawable().draw(canvas);
     }
 
@@ -110,9 +111,7 @@ public class ActionProcessButton extends ProcessButton {
     }
 
     private void setupProgressBarBounds() {
-        double indicatorHeight = getDimension(R.dimen.layer_padding);
-        int bottom = (int) (getMeasuredHeight() - indicatorHeight);
-        mProgressBar.setBounds(0, bottom, getMeasuredWidth(), getMeasuredHeight());
+        mProgressBar.setBounds(0, 0, getMeasuredWidth(), getMeasuredHeight());
     }
 
     public static class ProgressBar {
@@ -130,7 +129,7 @@ public class ActionProcessButton extends ProcessButton {
         private static final int FINISH_ANIMATION_DURATION_MS = 1000;
 
         // Interpolator for varying the speed of the animation.
-        private static final Interpolator INTERPOLATOR = new AccelerateDecelerateInterpolator();
+        private static final Interpolator INTERPOLATOR = new BounceInterpolator();
 
         private final Paint mPaint = new Paint();
         private final RectF mClipRect = new RectF();
@@ -256,16 +255,12 @@ public class ActionProcessButton extends ProcessButton {
                     drawCircle(canvas, cx, cy, mColor1, pct);
                 }
                 if (mTriggerPercentage > 0 && drawTriggerWhileFinishing) {
-                    // There is some portion of trigger to draw. Restore the canvas,
-                    // then draw the trigger. Otherwise, the trigger does not appear
-                    // until after the bar has finished animating and appears to
-                    // just jump in at a larger width than expected.
                     canvas.restoreToCount(restoreCount);
                     restoreCount = canvas.save();
                     canvas.clipRect(mBounds);
                     drawTrigger(canvas, cx, cy);
                 }
-                // Keep running until we finish out the last cycle.
+
                 ViewCompat.postInvalidateOnAnimation(mParent);
             } else {
                 // Otherwise if we're in the middle of a trigger, draw that.
