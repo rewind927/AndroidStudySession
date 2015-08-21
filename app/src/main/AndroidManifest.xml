@@ -38,6 +38,8 @@
 				android:name="com.ascii.phoenix.PhoenixMoonActivity"/>
 		<activity
 			    android:name="com.ascii.phoenix.DropDownToolsActivity"/>
+		<activity
+				android:name="com.karen.processbutton.activity.ProcessButtonActivity"/>
 	</application>
 
 </manifest>
