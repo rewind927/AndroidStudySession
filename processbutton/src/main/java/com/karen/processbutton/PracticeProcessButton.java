@@ -5,17 +5,17 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 
-public class PracticProcessButton extends ProcessButton {
+public class PracticeProcessButton extends ProcessButton {
 
-	public PracticProcessButton(Context context) {
+	public PracticeProcessButton(Context context) {
 		super(context);
 	}
 
-	public PracticProcessButton(Context context, AttributeSet attrs) {
+	public PracticeProcessButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
-	public PracticProcessButton(Context context, AttributeSet attrs, int defStyle) {
+	public PracticeProcessButton(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
 
