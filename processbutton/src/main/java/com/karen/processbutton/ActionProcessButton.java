@@ -11,7 +11,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AnimationUtils;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.Interpolator;
 
 public class ActionProcessButton extends ProcessButton {
@@ -111,7 +110,10 @@ public class ActionProcessButton extends ProcessButton {
     }
 
     private void setupProgressBarBounds() {
-        mProgressBar.setBounds(0, 0, getMeasuredWidth(), getMeasuredHeight());
+        //TODO Change the mProgressBar bounds attribute
+        double indicatorHeight = getDimension(R.dimen.layer_padding);
+        int top = (int) (getMeasuredHeight() - indicatorHeight);
+        mProgressBar.setBounds(0, top, getMeasuredWidth(), getMeasuredHeight());
     }
 
     public static class ProgressBar {
@@ -129,7 +131,8 @@ public class ActionProcessButton extends ProcessButton {
         private static final int FINISH_ANIMATION_DURATION_MS = 1000;
 
         // Interpolator for varying the speed of the animation.
-        private static final Interpolator INTERPOLATOR = new BounceInterpolator();
+        //TODO Change the interpolator
+        private static final Interpolator INTERPOLATOR = new AccelerateDecelerateInterpolator();
 
         private final Paint mPaint = new Paint();
         private final RectF mClipRect = new RectF();
