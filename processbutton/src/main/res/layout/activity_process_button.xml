@@ -53,7 +53,7 @@
 				custom:pb_textComplete="@string/success"
 				custom:pb_textProgress="@string/loading" />
 
-		<com.karen.processbutton.PracticProcessButton
+		<com.karen.processbutton.PracticeProcessButton
 				android:id="@+id/button_practice"
 				android:layout_width="match_parent"
 				android:layout_height="48dp"
