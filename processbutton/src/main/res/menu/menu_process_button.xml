@@ -13,7 +13,7 @@
 		  app:showAsAction="never"/>
 
 	<item android:id="@+id/practice_mode"
-		  android:title="@string/endless_mode"
+		  android:title="@string/practice_mode"
 		  android:orderInCategory="100"
 		  app:showAsAction="never"/>
 </menu>
