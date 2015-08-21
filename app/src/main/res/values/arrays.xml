@@ -9,5 +9,6 @@
 		<item>AndroidViewHolder</item>
 		<item>GoogleProgressBar</item>
 		<item>Phoenix</item>
+		<item>ProcessButton</item>
 	</string-array>
 </resources>

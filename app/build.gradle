@@ -32,4 +32,5 @@ dependencies {
 	compile project(':androidviewholder')
 	compile project(':googleProgressBar')
 	compile project(':phoenix')
+	compile project(':processbutton')
 }

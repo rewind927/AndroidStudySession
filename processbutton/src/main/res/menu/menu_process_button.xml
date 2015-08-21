@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:app="http://schemas.android.com/apk/res-auto"
+	  xmlns:tools="http://schemas.android.com/tools"
+	  tools:context="com.karen.processbutton.activity.ProcessButtonActivity">
+	<item android:id="@+id/progress_mode"
+		  android:title="@string/progress_mode"
+		  android:orderInCategory="100"
+		  app:showAsAction="never"/>
+
+	<item android:id="@+id/endless_mode"
+		  android:title="@string/endless_mode"
+		  android:orderInCategory="100"
+		  app:showAsAction="never"/>
+
+	<item android:id="@+id/practice_mode"
+		  android:title="@string/practice_mode"
+		  android:orderInCategory="100"
+		  app:showAsAction="never"/>
+</menu>
