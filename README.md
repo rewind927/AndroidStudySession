@@ -44,7 +44,7 @@ Date | Speaker | Topic | Slide |
 2015/9/11	|Ken	|[InboxLayout](	https://github.com/zhaozhentao/InboxLayout)|
 2015/9/18	|Zoey	|[android-crop](	https://github.com/jdamcd/android-crop)|
 2015/9/25	|Daniel	|[FreeFlow](	https://github.com/Comcast/FreeFlow)|
-2015/10/2	|Ascii	|[SpringIndicator](	https://github.com/chenupt/SpringIndicator)|
+2015/10/2	|Ascii	|[SpotifyTray-Android](	https://github.com/fouady/SpotifyTray-Android)|
 2015/10/9	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|
 2015/10/16	|Wendy	|[SwipeListView](	https://github.com/47deg/android-swipelistview)|
 2015/10/23	|Jason	|[StickyListHeaders](	https://github.com/emilsjolander/StickyListHeaders)|
