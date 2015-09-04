@@ -35,7 +35,7 @@ Date | Speaker | Topic | Slide |
 2015/7/24	|Zoey	|[GoogleProgressBar](	https://github.com/jpardogo/GoogleProgressBar)|[GoogleProgressBar] (https://drive.google.com/open?id=0BwCXq1hJTV8cUVNWc0tYa0ptelk)
 2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|[Pull-to-Refresh-Phoenix](https://docs.google.com/document/d/1YS0LYl4Q8Hjpc4pEdBJEuhe93rDl2tHYXPguvcHjUlU/edit?usp=sharing)
 2015/8/7	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|[Android Process Button](https://docs.google.com/document/d/1O6munVzY0ppYxTif0hABu2aUZjNSAyoM3vZfB4lU76Y/edit?usp=sharing)
-2015/8/14	|Wendy	|[Titanic](	https://github.com/RomainPiel/Titanic)|
+2015/8/14	|Wendy	|[Titanic](	https://github.com/RomainPiel/Titanic)|[Titanic](https://docs.google.com/a/kkbox.com/document/d/10mparm_UbJbcQeuPeWRggr3vzKzCRTq0s39kHIW6TjM/edit?usp=sharing)
 2015/8/21	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|
 2015/8/29	|Ryan	|[FlipViewPager.Draco](	https://github.com/Yalantis/FlipViewPager.Draco)|
 2015/9/4	|Johnny	|[CircleIndicator](	https://github.com/ongakuer/CircleIndicator)|
