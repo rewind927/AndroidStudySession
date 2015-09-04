@@ -40,6 +40,8 @@
 			    android:name="com.ascii.phoenix.DropDownToolsActivity"/>
 		<activity
 				android:name="com.karen.processbutton.activity.ProcessButtonActivity"/>
+		<activity
+				android:name="com.wendy.titanic.TitanicActivity"/>
 	</application>
 
 </manifest>

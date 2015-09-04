@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">Titanic</string>
+
+	<string name="loading">Loading</string>
+	<string name="demo_mode">Demo mode</string>
+	<string name="practice_mode">Practice mode</string>
+
+</resources>
