@@ -1,4 +1,4 @@
-include ':app', ':processbutton',
+include ':app', ':processbutton', ':titanic',
         ':circluarfloatingactionmenu',
         ':materialripplelayout',
         ':NumberProgressBar',

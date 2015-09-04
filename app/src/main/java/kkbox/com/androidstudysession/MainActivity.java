@@ -18,6 +18,7 @@ import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity;
 import com.karen.processbutton.activity.ProcessButtonActivity;
 import com.melnykov.fab.sample.FloatingActionButtonActivity;
+import com.wendy.titanic.TitanicActivity;
 
 import is.arontibo.library.sample.ElasticDownloadActivity;
 import kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity;
@@ -86,6 +87,8 @@ public class MainActivity extends ActionBarActivity {
 				case 8:
 					startActivity(new Intent(getActivity(), ProcessButtonActivity.class));
 					break;
+				case 9:
+					startActivity(new Intent(getActivity(), TitanicActivity.class));
 			}
 		}
 	}
