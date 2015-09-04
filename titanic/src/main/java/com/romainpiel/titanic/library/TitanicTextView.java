@@ -141,7 +141,6 @@ public class TitanicTextView extends TextView {
 
 	public void setStyle(int style) {
 		this.style = style;
-		wave = null;
 		createShader();
 	}
 
@@ -194,11 +193,9 @@ public class TitanicTextView extends TextView {
 
 		c.drawColor(getCurrentTextColor());
 
-		c.drawRect(0, size / 2, size / 2, size, paintBlue);
-		c.drawRect(size / 2, size / 2, size, size, paintRed);
-		shader = new BitmapShader(b, Shader.TileMode.REPEAT, Shader.TileMode.MIRROR);
-		getPaint().setShader(shader);
+		//TODO: draw canvas and create shader
 
+		getPaint().setShader(shader);
 
 	}
 
