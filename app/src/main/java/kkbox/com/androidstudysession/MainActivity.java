@@ -17,6 +17,7 @@ import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity;
 import com.karen.processbutton.activity.ProcessButtonActivity;
+import com.lorentzos.swipecards.SwipeCardsActivity;
 import com.melnykov.fab.sample.FloatingActionButtonActivity;
 import com.wendy.titanic.TitanicActivity;
 
@@ -89,6 +90,10 @@ public class MainActivity extends ActionBarActivity {
 					break;
 				case 9:
 					startActivity(new Intent(getActivity(), TitanicActivity.class));
+					break;
+				case 10:
+					startActivity(new Intent(getActivity(), SwipeCardsActivity.class));
+					break;
 			}
 		}
 	}

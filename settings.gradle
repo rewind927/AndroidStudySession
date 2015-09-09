@@ -6,4 +6,4 @@ include ':app', ':processbutton', ':titanic',
         ':floatingactionbutton',
         ':androidviewholder',
         ':googleProgressBar',
-        ':phoenix'
+        ':phoenix',':Swipecards'
