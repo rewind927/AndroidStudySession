@@ -2,13 +2,17 @@ package com.lorentzos.swipecards.flingswipe;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.database.DataSetObserver;
+import android.graphics.PointF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.FrameLayout;
+
+import com.lorentzos.swipecards.R;
 
 /**
  * Created by dionysis_lorentzos on 5/8/14
@@ -32,6 +36,7 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
     private View mActiveCard = null;
     private OnItemClickListener mOnItemClickListener;
     private FlingCardListener flingCardListener;
+    private PointF mLastTouchPoint;
 
 
     public SwipeFlingAdapterView(Context context) {
@@ -39,17 +44,17 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
     }
 
     public SwipeFlingAdapterView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        this(context, attrs, R.attr.SwipeFlingStyle);
     }
 
     public SwipeFlingAdapterView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-//        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeFlingAdapterView, defStyle, 0);
-//        MAX_VISIBLE = a.getInt(R.styleable.SwipeFlingAdapterView_max_visible, MAX_VISIBLE);
-//        MIN_ADAPTER_STACK = a.getInt(R.styleable.SwipeFlingAdapterView_min_adapter_stack, MIN_ADAPTER_STACK);
-//        ROTATION_DEGREES = a.getFloat(R.styleable.SwipeFlingAdapterView_rotation_degrees, ROTATION_DEGREES);
-//        a.recycle();
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeFlingAdapterView, defStyle, 0);
+        MAX_VISIBLE = a.getInt(R.styleable.SwipeFlingAdapterView_max_visible, MAX_VISIBLE);
+        MIN_ADAPTER_STACK = a.getInt(R.styleable.SwipeFlingAdapterView_min_adapter_stack, MIN_ADAPTER_STACK);
+        ROTATION_DEGREES = a.getFloat(R.styleable.SwipeFlingAdapterView_rotation_degrees, ROTATION_DEGREES);
+        a.recycle();
     }
 
 
@@ -71,7 +76,7 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
         setAdapter(mAdapter);
     }
 
- 	@Override
+    @Override
     public View getSelectedView() {
         return mActiveCard;
     }
@@ -100,8 +105,14 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
         }else {
             View topCard = getChildAt(LAST_OBJECT_IN_STACK);
             if(mActiveCard!=null && topCard!=null && topCard==mActiveCard) {
-                removeViewsInLayout(0, LAST_OBJECT_IN_STACK);
-                layoutChildren(1, adapterCount);
+                if (this.flingCardListener.isTouching()) {
+                    PointF lastPoint = this.flingCardListener.getLastPoint();
+                    if (this.mLastTouchPoint == null || !this.mLastTouchPoint.equals(lastPoint)) {
+                        this.mLastTouchPoint = lastPoint;
+                        removeViewsInLayout(0, LAST_OBJECT_IN_STACK);
+                        layoutChildren(1, adapterCount);
+                    }
+                }
             }else{
                 // Reset the UI and set top view listener
                 removeAllViewsInLayout();
@@ -111,8 +122,8 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
         }
 
         mInLayout = false;
-        
-        if(adapterCount < MAX_VISIBLE) mFlingListener.onAdapterAboutToEmpty(adapterCount);
+
+        if(adapterCount <= MIN_ADAPTER_STACK) mFlingListener.onAdapterAboutToEmpty(adapterCount);
     }
 
 
@@ -197,8 +208,8 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
 
 
     /**
-    *  Set the top view and add the fling listener
-    */
+     *  Set the top view and add the fling listener
+     */
     private void setTopView() {
         if(getChildCount()>0){
 
@@ -208,34 +219,34 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
                 flingCardListener = new FlingCardListener(mActiveCard, mAdapter.getItem(0),
                         ROTATION_DEGREES, new FlingCardListener.FlingListener() {
 
-                            @Override
-                            public void onCardExited() {
-                                mActiveCard = null;
-                                mFlingListener.removeFirstObjectInAdapter();
-                            }
+                    @Override
+                    public void onCardExited() {
+                        mActiveCard = null;
+                        mFlingListener.removeFirstObjectInAdapter();
+                    }
 
-                            @Override
-                            public void leftExit(Object dataObject) {
-                                mFlingListener.onLeftCardExit(dataObject);
-                            }
+                    @Override
+                    public void leftExit(Object dataObject) {
+                        mFlingListener.onLeftCardExit(dataObject);
+                    }
 
-                            @Override
-                            public void rightExit(Object dataObject) {
-                                mFlingListener.onRightCardExit(dataObject);
-                            }
+                    @Override
+                    public void rightExit(Object dataObject) {
+                        mFlingListener.onRightCardExit(dataObject);
+                    }
 
-                            @Override
-                            public void onClick(Object dataObject) {
-                                if(mOnItemClickListener!=null)
-                                    mOnItemClickListener.onItemClicked(0, dataObject);
+                    @Override
+                    public void onClick(Object dataObject) {
+                        if(mOnItemClickListener!=null)
+                            mOnItemClickListener.onItemClicked(0, dataObject);
 
-                            }
+                    }
 
-                            @Override
-                            public void onScroll(float scrollProgressPercent) {
-                                mFlingListener.onScroll(scrollProgressPercent);
-                            }
-                        });
+                    @Override
+                    public void onScroll(float scrollProgressPercent) {
+                        mFlingListener.onScroll(scrollProgressPercent);
+                    }
+                });
 
                 mActiveCard.setOnTouchListener(flingCardListener);
             }
@@ -310,15 +321,15 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
 
 
     public interface OnItemClickListener {
-        public void onItemClicked(int itemPosition, Object dataObject);
+        void onItemClicked(int itemPosition, Object dataObject);
     }
 
     public interface onFlingListener {
-        public void removeFirstObjectInAdapter();
-        public void onLeftCardExit(Object dataObject);
-        public void onRightCardExit(Object dataObject);
-        public void onAdapterAboutToEmpty(int itemsInAdapter);
-        public void onScroll(float scrollProgressPercent);
+        void removeFirstObjectInAdapter();
+        void onLeftCardExit(Object dataObject);
+        void onRightCardExit(Object dataObject);
+        void onAdapterAboutToEmpty(int itemsInAdapter);
+        void onScroll(float scrollProgressPercent);
     }
 
 
