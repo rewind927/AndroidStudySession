@@ -3,7 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         >
 
-    <com.lorentzos.swipecards.flingswipe.SwipeFlingAdapterView
+    <com.lorentzos.swipecards.practice.SwipeFlingAdapterView
         android:id="@+id/frame"
         android:background="#ffeee9e2"
         android:layout_width="match_parent"
