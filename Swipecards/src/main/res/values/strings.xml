@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fling Swipe Cards</string>
+    <string name="swipe_cards">Swipe Cards</string>
+    <string name="practice">Practice</string>
 </resources>

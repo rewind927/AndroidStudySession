@@ -43,7 +43,11 @@
 		<activity
 				android:name="com.wendy.titanic.TitanicActivity"/>
 		<activity
+				android:name="com.lorentzos.swipecards.ChooseSwipeCardsActivity"/>
+		<activity
 				android:name="com.lorentzos.swipecards.SwipeCardsActivity"/>
+		<activity
+				android:name="com.lorentzos.swipecards.PracticeSwipeCardsActivity"/>
 	</application>
 
 </manifest>
