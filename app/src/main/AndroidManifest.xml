@@ -42,6 +42,8 @@
 				android:name="com.karen.processbutton.activity.ProcessButtonActivity"/>
 		<activity
 				android:name="com.wendy.titanic.TitanicActivity"/>
+		<activity
+				android:name="com.lorentzos.swipecards.SwipeCardsActivity"/>
 	</application>
 
 </manifest>
