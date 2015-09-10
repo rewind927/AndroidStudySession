@@ -54,13 +54,8 @@ public class PracticeSwipeCardsActivity extends Activity {
 		flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
 			@Override
 			public boolean canRemoveCard(Object dataObject, boolean isLeft) {
-				if((dataObject).equals("左") && isLeft) {
-					return true;
-				} else if ((dataObject).equals("右") && !isLeft) {
-					return true;
-				} else {
-					return false;
-				}
+				//TODO check left or right;
+				return true;
 			}
 
 			@Override

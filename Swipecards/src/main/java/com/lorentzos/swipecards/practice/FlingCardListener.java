@@ -216,13 +216,13 @@ public class FlingCardListener implements View.OnTouchListener {
     }
 
     private boolean movedBeyondLeftBorder() {
-        //TODO add remove listener
-        return aPosX + halfWidth < leftBorder() && mFlingListener.canRemoveCard(dataObject, true);
+        //TODO add canRemoveCard
+        return aPosX + halfWidth < leftBorder();
     }
 
     private boolean movedBeyondRightBorder() {
-        //TODO add remove listener
-        return aPosX + halfWidth > rightBorder() && mFlingListener.canRemoveCard(dataObject, false);
+        //TODO add canRemoveCard
+        return aPosX + halfWidth > rightBorder();
     }
 
 
@@ -272,7 +272,8 @@ public class FlingCardListener implements View.OnTouchListener {
      * Starts a default left exit animation.
      */
     public void selectLeft() {
-        if (!isAnimationRunning && mFlingListener.canRemoveCard(dataObject, true))
+        //TODO add canRemoveCard
+        if (!isAnimationRunning)
             onSelected(true, objectY, 200);
     }
 
@@ -280,7 +281,8 @@ public class FlingCardListener implements View.OnTouchListener {
      * Starts a default right exit animation.
      */
     public void selectRight() {
-        if (!isAnimationRunning && mFlingListener.canRemoveCard(dataObject, false))
+        //TODO add canRemoveCard
+        if (!isAnimationRunning)
             onSelected(false, objectY, 200);
     }
 
@@ -336,6 +338,8 @@ public class FlingCardListener implements View.OnTouchListener {
     }
 
     protected interface FlingListener {
+
+        //add canRemoveCard and return boolean
         boolean canRemoveCard(Object dataObject, boolean isLeft);
 
         void onCardExited();
