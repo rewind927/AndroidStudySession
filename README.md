@@ -34,31 +34,31 @@ Date | Speaker | Topic | Slide |
 2015/7/17	|Daniel	|[AndroidViewHover](https://github.com/daimajia/AndroidViewHover)|[AndroidViewHover](https://docs.google.com/presentation/d/1LcC8h51e8DFe_FmDdgB5Pv_DfrMX4mSszC54mZHOjXo/edit?usp=sharing)
 2015/7/24	|Zoey	|[GoogleProgressBar](	https://github.com/jpardogo/GoogleProgressBar)|[GoogleProgressBar] (https://drive.google.com/open?id=0BwCXq1hJTV8cUVNWc0tYa0ptelk)
 2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|[Pull-to-Refresh-Phoenix](https://docs.google.com/document/d/1YS0LYl4Q8Hjpc4pEdBJEuhe93rDl2tHYXPguvcHjUlU/edit?usp=sharing)
-2015/7/24	|Karen	|[SwipeMenuListView](	https://github.com/baoyongzhang/SwipeMenuListView)|
-2015/7/31	|Wendy	|[AsymmetricGridView](	https://github.com/felipecsl/AsymmetricGridView)|
-2015/8/7	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|
-2015/8/14	|Ryan	|[FlipViewPager.Draco](	https://github.com/Yalantis/FlipViewPager.Draco)|
-2015/8/21	|Johnny	|[CircleIndicator](	https://github.com/ongakuer/CircleIndicator)|
-2015/8/29	|Ethan	|[ShowcaseView](	https://github.com/amlcurran/ShowcaseView)|
-2015/9/4	|Kami	|[DraggablePanel](	https://github.com/pedrovgs/DraggablePanel)|
-2015/9/11	|Ken	|[InboxLayout](	https://github.com/zhaozhentao/InboxLayout)|
-2015/9/18	|Zoey	|[android-crop](	https://github.com/jdamcd/android-crop)|
-2015/9/25	|Daniel	|[FreeFlow](	https://github.com/Comcast/FreeFlow)|
-2015/10/2	|Ascii	|[SpotifyTray-Android](	https://github.com/fouady/SpotifyTray-Android)|
-2015/10/9	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|
-2015/10/16	|Wendy	|[SwipeListView](	https://github.com/47deg/android-swipelistview)|
-2015/10/23	|Jason	|[StickyListHeaders](	https://github.com/emilsjolander/StickyListHeaders)|
-2015/10/30	|Ryan	|[CircleImageView](	https://github.com/hdodenhof/CircleImageView)|
-2015/11/6	|Johnny	|[ArcAnimator](	https://github.com/asyl/ArcAnimator)|
-2015/11/13	|Ethan	|[AndroidImageSlider](	https://github.com/daimajia/AndroidImageSlider)|
-2015/11/20	|Kami	|[ParallaxPagerTransformer](	https://github.com/xgc1986/ParallaxPagerTransformer)|
-2015/11/27	|Ken	|[FlabbyListView](	https://github.com/jpardogo/FlabbyListView)|
-2015/12/4	|Zoey	|[DiscreteSeekBar](	https://github.com/AnderWeb/discreteSeekBar)|
-2015/12/11	|Daniel	|[CircularReveal](	https://github.com/ozodrukh/CircularReveal)|
-2015/12/18	|Ascii	|[Shimmer for Android](	https://github.com/facebook/shimmer-android)|
-2015/12/25	|Karen	|[Context-Menu.Android](	https://github.com/Yalantis/Context-Menu.Android)|
-2016/1/8	|Wendy	|[DialogPlus](	https://github.com/orhanobut/dialogplus)|
-2016/1/15	|Jason	|[EtsyBlur](	https://github.com/Manabu-GT/EtsyBlur)|
+2015/8/7	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|[Android Process Button](https://docs.google.com/document/d/1O6munVzY0ppYxTif0hABu2aUZjNSAyoM3vZfB4lU76Y/edit?usp=sharing)
+2015/8/14	|Wendy	|[Titanic](	https://github.com/RomainPiel/Titanic)|[Titanic](https://docs.google.com/a/kkbox.com/document/d/10mparm_UbJbcQeuPeWRggr3vzKzCRTq0s39kHIW6TjM/edit?usp=sharing)
+2015/8/21	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|[Swipecards](https://docs.google.com/document/d/1XO8CGJ8qvnHboM613DZk-tBO5tzUO-Q1rIdvhQbu80k/edit?usp=sharing)
+2015/8/29	|Ryan	|[FlipViewPager.Draco](	https://github.com/Yalantis/FlipViewPager.Draco)|
+2015/9/4	|Johnny	|[CircleIndicator](	https://github.com/ongakuer/CircleIndicator)|
+2015/9/11	|Ethan	|[ShowcaseView](	https://github.com/amlcurran/ShowcaseView)|
+2015/9/18	|Kami	|[DraggablePanel](	https://github.com/pedrovgs/DraggablePanel)|
+2015/9/25	|Ken	|[InboxLayout](	https://github.com/zhaozhentao/InboxLayout)|
+2015/10/2	|Zoey	|[android-crop](	https://github.com/jdamcd/android-crop)|
+2015/10/9	|Daniel	|[FreeFlow](	https://github.com/Comcast/FreeFlow)|
+2015/10/16	|Ascii	|[SpotifyTray-Android](	https://github.com/fouady/SpotifyTray-Android)|
+2015/10/23	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|
+2015/10/30	|Wendy	|[SwipeListView](	https://github.com/47deg/android-swipelistview)|
+2015/11/13	|Jason	|[StickyListHeaders](	https://github.com/emilsjolander/StickyListHeaders)|
+2015/11/20	|Ryan	|[CircleImageView](	https://github.com/hdodenhof/CircleImageView)|
+2015/11/27	|Johnny	|[ArcAnimator](	https://github.com/asyl/ArcAnimator)|
+2015/12/4	|Ethan	|[AndroidImageSlider](	https://github.com/daimajia/AndroidImageSlider)|
+2015/12/11	|Kami	|[ParallaxPagerTransformer](	https://github.com/xgc1986/ParallaxPagerTransformer)|
+2015/12/18	|Ken	|[FlabbyListView](	https://github.com/jpardogo/FlabbyListView)|
+2015/12/25	|Zoey	|[DiscreteSeekBar](	https://github.com/AnderWeb/discreteSeekBar)|
+2016/1/8	|Daniel	|[CircularReveal](	https://github.com/ozodrukh/CircularReveal)|
+2016/1/15	|Ascii	|[Shimmer for Android](	https://github.com/facebook/shimmer-android)|
+2016/1/22	|Karen	|[Context-Menu.Android](	https://github.com/Yalantis/Context-Menu.Android)|
+2016/1/29	|Wendy	|[DialogPlus](	https://github.com/orhanobut/dialogplus)|
+2016/2/5	|Jason	|[EtsyBlur](	https://github.com/Manabu-GT/EtsyBlur)|
 
 
 ### Reference:
