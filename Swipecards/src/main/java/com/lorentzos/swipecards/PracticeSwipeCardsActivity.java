@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.lorentzos.swipecards.flingswipe.SwipeFlingAdapterView;
+import com.lorentzos.swipecards.practice.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class PracticeSwipeCardsActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_my);
+		setContentView(R.layout.activity_practice);
 		flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 		left = (Button) findViewById(R.id.left);
 		left.setOnClickListener(new View.OnClickListener() {
@@ -44,19 +44,25 @@ public class PracticeSwipeCardsActivity extends Activity {
 		});
 
 		al = new ArrayList<>();
-		al.add("php");
-		al.add("c");
-		al.add("python");
-		al.add("java");
-		al.add("html");
-		al.add("c++");
-		al.add("css");
-		al.add("javascript");
+		for (int i = 0; i < 50; i++) {
+			al.add(Math.random()<0.5? "左" : "右");
+		}
 
 		arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al);
 
 		flingContainer.setAdapter(arrayAdapter);
 		flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
+			@Override
+			public boolean canRemoveCard(Object dataObject, boolean isLeft) {
+				if((dataObject).equals("左") && isLeft) {
+					return true;
+				} else if ((dataObject).equals("右") && !isLeft) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
 			@Override
 			public void removeFirstObjectInAdapter() {
 				// this is the simplest way to delete an object from the Adapter (/AdapterView)

@@ -220,6 +220,11 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
                         ROTATION_DEGREES, new FlingCardListener.FlingListener() {
 
                     @Override
+                    public boolean canRemoveCard(Object dataObject, boolean isLeft) {
+                        return mFlingListener.canRemoveCard(dataObject, isLeft);
+                    }
+
+                    @Override
                     public void onCardExited() {
                         mActiveCard = null;
                         mFlingListener.removeFirstObjectInAdapter();
@@ -325,6 +330,7 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
     }
 
     public interface onFlingListener {
+        boolean canRemoveCard(Object dataObject, boolean isLeft);
         void removeFirstObjectInAdapter();
         void onLeftCardExit(Object dataObject);
         void onRightCardExit(Object dataObject);
