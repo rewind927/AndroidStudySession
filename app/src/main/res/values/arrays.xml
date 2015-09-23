@@ -12,5 +12,6 @@
 		<item>ProcessButton</item>
 		<item>Titanic</item>
 		<item>SwipeCards</item>
+		<item>FlipViewPager</item>
 	</string-array>
 </resources>

@@ -35,4 +35,5 @@ dependencies {
 	compile project(':processbutton')
 	compile project(':titanic')
 	compile project(':Swipecards')
+	compile project(':flipviewpager')
 }

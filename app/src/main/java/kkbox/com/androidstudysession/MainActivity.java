@@ -17,6 +17,7 @@ import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity;
 import com.karen.processbutton.activity.ProcessButtonActivity;
+import com.kkbox.flipviewpager.sample.activity.FriendsActivity;
 import com.lorentzos.swipecards.ChooseSwipeCardsActivity;
 import com.melnykov.fab.sample.FloatingActionButtonActivity;
 import com.wendy.titanic.TitanicActivity;
@@ -93,6 +94,9 @@ public class MainActivity extends ActionBarActivity {
 					break;
 				case 10:
 					startActivity(new Intent(getActivity(), ChooseSwipeCardsActivity.class));
+					break;
+				case 11:
+					startActivity(new Intent(getActivity(), FriendsActivity.class));
 					break;
 			}
 		}

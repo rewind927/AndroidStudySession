@@ -48,6 +48,8 @@
 				android:name="com.lorentzos.swipecards.SwipeCardsActivity"/>
 		<activity
 				android:name="com.lorentzos.swipecards.PracticeSwipeCardsActivity"/>
+		<activity
+			android:name="com.kkbox.flipviewpager.sample.activity.FriendsActivity"/>
 	</application>
 
 </manifest>
