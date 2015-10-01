@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.ascii.phoenix.PhoenixActivity;
 import com.daimajia.androidviewhover.activity.AndroidViewHolderActivity;
 import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
+import com.johnny.circleindicator.IndicatorDemoActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity;
 import com.karen.processbutton.activity.ProcessButtonActivity;
@@ -97,6 +98,9 @@ public class MainActivity extends ActionBarActivity {
 					break;
 				case 11:
 					startActivity(new Intent(getActivity(), FriendsActivity.class));
+					break;
+				case 12:
+					startActivity(new Intent(getActivity(), IndicatorDemoActivity.class));
 					break;
 			}
 		}

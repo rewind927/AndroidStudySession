@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="300dp">
+
+			<android.support.v4.view.ViewPager
+					android:id="@+id/viewpager_unselected_background"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"/>
+
+			<!-- TODO: change ci_width to 55dp  -->
+			<!-- TODO: change ci_height to 55dp  -->
+			<com.johnny.circleindicator.view.PracticeFlipIndicator
+					android:id="@+id/indicator_unselected_background"
+					android:layout_centerInParent="true"
+					android:layout_width="fill_parent"
+					app:ci_width="10dp"
+					app:ci_height="10dp"
+					android:layout_height="60dp"
+					/>
+		</RelativeLayout>
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="300dp"
+				android:background="@drawable/grid">
+
+			<include
+					android:id="@+id/flip_include"
+					layout="@layout/include_flip"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="300dp">
+
+			<android.support.v4.view.ViewPager
+					android:id="@+id/viewpager_custom"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"/>
+
+			<me.relex.circleindicator.CircleIndicator
+					android:id="@+id/indicator_custom"
+					app:ci_width="30dp"
+					app:ci_height="4dp"
+					app:ci_margin="6dp"
+					app:ci_animator="@animator/indicator_animator"
+					app:ci_animator_reverse="@animator/indicator_animator_reverse"
+					app:ci_drawable="@drawable/black_radius_square"
+					android:layout_centerInParent="true"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="300dp">
+
+			<android.support.v4.view.ViewPager
+					android:id="@+id/viewpager_default"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"/>
+
+			<me.relex.circleindicator.CircleIndicator
+					android:id="@+id/indicator_default"
+					android:layout_centerInParent="true"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"/>
+		</RelativeLayout>
+
+	</LinearLayout>
+</ScrollView>

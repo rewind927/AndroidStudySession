@@ -50,6 +50,8 @@
 				android:name="com.lorentzos.swipecards.PracticeSwipeCardsActivity"/>
 		<activity
 			android:name="com.kkbox.flipviewpager.sample.activity.FriendsActivity"/>
+
+		<activity android:name="com.johnny.circleindicator.IndicatorDemoActivity" />
 	</application>
 
 </manifest>

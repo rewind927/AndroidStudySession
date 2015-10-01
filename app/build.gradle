@@ -36,4 +36,5 @@ dependencies {
 	compile project(':titanic')
 	compile project(':Swipecards')
 	compile project(':flipviewpager')
+	compile project(':circleindicator')
 }
