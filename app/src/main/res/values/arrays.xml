@@ -13,5 +13,6 @@
 		<item>Titanic</item>
 		<item>SwipeCards</item>
 		<item>FlipViewPager</item>
+		<item>CircleIndicator</item>
 	</string-array>
 </resources>
