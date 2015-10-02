@@ -31,19 +31,14 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 	private int mIndicatorWidth = -1;
 	private int mIndicatorHeight = -1;
 	// TODO Don't need mAnimatorResId & mAnimatorReverseResId
-	private int mAnimatorResId = R.animator.scale_with_alpha;
 	// TODO Don't need mAnimatorReverseResId
-	private int mAnimatorReverseResId = 0;
 	// TODO Don't need mIndicatorBackgroundResId
-	private int mIndicatorBackgroundResId = R.drawable.white_radius;
 	// TODO Don't need mIndicatorUnselectedBackgroundResId
-	private int mIndicatorUnselectedBackgroundResId = R.drawable.white_radius;
 	private int mCurrentPosition = 0;
 	// TODO Don't need mAnimationOut
-	private Animator mAnimationOut;
 	// TODO Don't need mAnimationIn
-	private Animator mAnimationIn;
 	// TODO Add ViewFilpIcon's ArrayList
+	private ArrayList<ViewFilpIcon> filpIcons = new ArrayList<>();
 
 	public PracticeFlipIndicator(Context context) {
 		super(context);
@@ -74,17 +69,6 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 				typedArray.getDimensionPixelSize(R.styleable.CircleIndicator_ci_height, -1);
 		mIndicatorMargin =
 				typedArray.getDimensionPixelSize(R.styleable.CircleIndicator_ci_margin, -1);
-
-		mAnimatorResId = typedArray.getResourceId(R.styleable.CircleIndicator_ci_animator,
-				R.animator.scale_with_alpha);
-		mAnimatorReverseResId =
-				typedArray.getResourceId(R.styleable.CircleIndicator_ci_animator_reverse, 0);
-		mIndicatorBackgroundResId =
-				typedArray.getResourceId(R.styleable.CircleIndicator_ci_drawable,
-						R.drawable.white_radius);
-		mIndicatorUnselectedBackgroundResId =
-				typedArray.getResourceId(R.styleable.CircleIndicator_ci_drawable_unselected,
-						mIndicatorBackgroundResId);
 		typedArray.recycle();
 	}
 
@@ -105,11 +89,6 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 		mIndicatorHeight = indicatorHeight;
 		mIndicatorMargin = indicatorMargin;
 
-		mAnimatorResId = animatorId;
-		mAnimatorReverseResId = animatorReverseId;
-		mIndicatorBackgroundResId = indicatorBackgroundId;
-		mIndicatorUnselectedBackgroundResId = indicatorUnselectedBackgroundId;
-
 		checkIndicatorConfig(getContext());
 	}
 
@@ -119,20 +98,6 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 				(mIndicatorHeight < 0) ? dip2px(DEFAULT_INDICATOR_WIDTH) : mIndicatorHeight;
 		mIndicatorMargin =
 				(mIndicatorMargin < 0) ? dip2px(DEFAULT_INDICATOR_WIDTH) : mIndicatorMargin;
-
-		mAnimatorResId = (mAnimatorResId == 0) ? R.animator.scale_with_alpha : mAnimatorResId;
-		mAnimationOut = AnimatorInflater.loadAnimator(context, mAnimatorResId);
-		if (mAnimatorReverseResId == 0) {
-			mAnimationIn = AnimatorInflater.loadAnimator(context, mAnimatorResId);
-			mAnimationIn.setInterpolator(new ReverseInterpolator());
-		} else {
-			mAnimationIn = AnimatorInflater.loadAnimator(context, mAnimatorReverseResId);
-		}
-		mIndicatorBackgroundResId = (mIndicatorBackgroundResId == 0) ? R.drawable.white_radius
-				: mIndicatorBackgroundResId;
-		mIndicatorUnselectedBackgroundResId =
-				(mIndicatorUnselectedBackgroundResId == 0) ? mIndicatorBackgroundResId
-						: mIndicatorUnselectedBackgroundResId;
 	}
 
 	public void setViewPager(ViewPager viewPager) {
@@ -167,24 +132,15 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 			return;
 		}
 
-		if (mAnimationIn.isRunning())
-			mAnimationIn.end();
-		if (mAnimationOut.isRunning())
-			mAnimationOut.end();
-
 		// TODO Edit to Previous ViewFilpIcon
-		View currentIndicator = getChildAt(mCurrentPosition);
-		currentIndicator.setBackgroundResource(mIndicatorUnselectedBackgroundResId);
+		ViewFilpIcon currentIndicator = filpIcons.get(mCurrentPosition);
 		// TODO Filp it!
-		mAnimationIn.setTarget(currentIndicator);
-		mAnimationIn.start();
+		currentIndicator.doAnimation();
 
 		// TODO Edit to ViewFilpIcon
-		View selectedIndicator = getChildAt(position);
-		selectedIndicator.setBackgroundResource(mIndicatorBackgroundResId);
+		ViewFilpIcon selectedIndicator = filpIcons.get(position);
 		// TODO Filp it!
-		mAnimationOut.setTarget(selectedIndicator);
-		mAnimationOut.start();
+		selectedIndicator.doAnimation();
 
 		mCurrentPosition = position;
 	}
@@ -203,30 +159,29 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 		if (count <= 0) {
 			return;
 		}
-		addIndicator(mIndicatorBackgroundResId, mAnimationOut);
+		addIndicator(true);
 		for (int i = 1; i < count; i++) {
-			addIndicator(mIndicatorUnselectedBackgroundResId, mAnimationIn);
+			addIndicator(false);
 		}
 	}
 
-	private void addIndicator(@DrawableRes int backgroundDrawableId, Animator animator) {
-		if (animator.isRunning())
-			animator.end();
-
+	private void addIndicator(boolean selected) {
 		// TODO Edit to ViewFilpIcon
-		View indicator = new View(getContext());
-		indicator.setBackgroundResource(backgroundDrawableId);
-		addView(indicator, mIndicatorWidth, mIndicatorHeight);
-		LayoutParams lp = (LayoutParams) indicator.getLayoutParams();
+		ViewFilpIcon indicator = new ViewFilpIcon(getContext());
+		addView(indicator.viewRoot, mIndicatorWidth, mIndicatorHeight);
+		LayoutParams lp = (LayoutParams) indicator.viewRoot.getLayoutParams();
 		lp.leftMargin = mIndicatorMargin;
 		lp.rightMargin = mIndicatorMargin;
-		indicator.setLayoutParams(lp);
+		indicator.viewRoot.setLayoutParams(lp);
+
 
 		// TODO Filp at the first selected item
-		animator.setTarget(indicator);
-		animator.start();
+		if (selected) {
+			indicator.showNext();
+		}
 
 		// TODO Add to ArrayList
+		filpIcons.add(indicator);
 	}
 
 	private class ReverseInterpolator implements Interpolator {
@@ -256,10 +211,12 @@ public class PracticeFlipIndicator extends LinearLayout implements OnPageChangeL
 
 		protected void doAnimation() {
 			// TODO doAnimation
+			AnimationFactory.flipTransition(viewRoot, AnimationFactory.FlipDirection.RIGHT_LEFT, 200);
 		}
 
 		protected void showNext() {
 			// TODO showNext
+			viewRoot.showNext();
 		}
 	}
 }

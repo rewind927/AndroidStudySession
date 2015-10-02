@@ -26,8 +26,8 @@
 					android:id="@+id/indicator_unselected_background"
 					android:layout_centerInParent="true"
 					android:layout_width="fill_parent"
-					app:ci_width="10dp"
-					app:ci_height="10dp"
+					app:ci_width="55dp"
+					app:ci_height="55dp"
 					android:layout_height="60dp"
 					/>
 		</RelativeLayout>
