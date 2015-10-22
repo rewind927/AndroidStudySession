@@ -1,4 +1,4 @@
-include ':app', ':processbutton', ':titanic', ':flipviewpager', ':circleindicator',
+include ':app', ':processbutton', ':titanic', ':flipviewpager', ':circleindicator', ':bubbles',
         ':circluarfloatingactionmenu',
         ':materialripplelayout',
         ':NumberProgressBar',

@@ -14,5 +14,6 @@
 		<item>SwipeCards</item>
 		<item>FlipViewPager</item>
 		<item>CircleIndicator</item>
+		<item>Bubbles</item>
 	</string-array>
 </resources>

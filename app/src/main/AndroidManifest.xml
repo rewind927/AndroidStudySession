@@ -37,7 +37,7 @@
 		<activity
 				android:name="com.ascii.phoenix.PhoenixMoonActivity"/>
 		<activity
-			    android:name="com.ascii.phoenix.DropDownToolsActivity"/>
+				android:name="com.ascii.phoenix.DropDownToolsActivity"/>
 		<activity
 				android:name="com.karen.processbutton.activity.ProcessButtonActivity"/>
 		<activity
@@ -49,9 +49,11 @@
 		<activity
 				android:name="com.lorentzos.swipecards.PracticeSwipeCardsActivity"/>
 		<activity
-			android:name="com.kkbox.flipviewpager.sample.activity.FriendsActivity"/>
-
-		<activity android:name="com.johnny.circleindicator.IndicatorDemoActivity" />
+				android:name="com.kkbox.flipviewpager.sample.activity.FriendsActivity"/>
+		<activity
+				android:name="com.johnny.circleindicator.IndicatorDemoActivity"/>
+		<activity
+				android:name="com.kkbox.bubbles.BubblesDemoActivity"/>
 	</application>
 
 </manifest>

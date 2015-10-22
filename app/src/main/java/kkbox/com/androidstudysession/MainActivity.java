@@ -18,6 +18,7 @@ import com.johnny.circleindicator.IndicatorDemoActivity;
 import com.johnny.materialripplelayout.activity.RippleActivity;
 import com.jpardogo.android.googleprogressbar.GoogleProgressBarActivity;
 import com.karen.processbutton.activity.ProcessButtonActivity;
+import com.kkbox.bubbles.BubblesDemoActivity;
 import com.kkbox.flipviewpager.sample.activity.FriendsActivity;
 import com.lorentzos.swipecards.ChooseSwipeCardsActivity;
 import com.melnykov.fab.sample.FloatingActionButtonActivity;
@@ -101,6 +102,9 @@ public class MainActivity extends ActionBarActivity {
 					break;
 				case 12:
 					startActivity(new Intent(getActivity(), IndicatorDemoActivity.class));
+					break;
+				case 13:
+					startActivity(new Intent(getActivity(), BubblesDemoActivity.class));
 					break;
 			}
 		}
