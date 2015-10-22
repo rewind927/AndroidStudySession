@@ -39,7 +39,7 @@ Date | Speaker | Topic | Slide |
 2015/8/21	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|[Swipecards](https://docs.google.com/document/d/1XO8CGJ8qvnHboM613DZk-tBO5tzUO-Q1rIdvhQbu80k/edit?usp=sharing)
 2015/8/29	|Ryan	|[FlipViewPager.Draco](	https://github.com/Yalantis/FlipViewPager.Draco)|[FlipViewPager.Draco](https://docs.google.com/presentation/d/1sUr9DeWdzS5dyanhm_YR98T092PODZ-6LTUrfqizrJI/edit?usp=sharing)
 2015/9/4	|Johnny	|[CircleIndicator](	https://github.com/ongakuer/CircleIndicator)|[CircleIndicator](https://docs.google.com/document/d/1re7jt9g2PAW-KfqvAUiHKNHT_P746TrVTWRDq9BYyJc/edit?usp=sharing)
-2015/9/11	|Ethan	|[ShowcaseView](	https://github.com/amlcurran/ShowcaseView)|
+2015/9/11	|Ethan	|[Bubbles](	https://github.com/txusballesteros/bubbles-for-android)| [Bubbles](https://docs.google.com/presentation/d/1KEIIKdTWcHV7GQDln0ihtHVJuYXyYrh1hmH-_FMaHQQ/edit?usp=sharing)
 2015/9/18	|Kami	|[DraggablePanel](	https://github.com/pedrovgs/DraggablePanel)|
 2015/9/25	|Ken	|[InboxLayout](	https://github.com/zhaozhentao/InboxLayout)|
 2015/10/2	|Zoey	|[android-crop](	https://github.com/jdamcd/android-crop)|
