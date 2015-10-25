@@ -38,4 +38,5 @@ dependencies {
 	compile project(':flipviewpager')
 	compile project(':circleindicator')
 	compile project(':bubbles')
+    compile project(':heartlayout')
 }

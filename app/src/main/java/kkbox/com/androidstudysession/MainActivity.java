@@ -26,6 +26,7 @@ import com.wendy.titanic.TitanicActivity;
 
 import is.arontibo.library.sample.ElasticDownloadActivity;
 import kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity;
+import tyrantgit.widget.sample.HeartLayoutActivity;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -44,16 +45,14 @@ public class MainActivity extends ActionBarActivity {
 
 		private ListView demosListView;
 
-		public ContentFragment() {
-		}
+		public ContentFragment() {}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-		                         Bundle savedInstanceState) {
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_demo, container, false);
 			// 要新增 demo 的入口請修改 arrays.xml 裡的 entries item
 			String[] items = getResources().getStringArray(R.array.entries);
-			ArrayAdapter<String> simpleAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, items);
+			ArrayAdapter<String> simpleAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, items);
 			demosListView = (ListView) rootView.findViewById(R.id.demosListView);
 			demosListView.setAdapter(simpleAdapter);
 			demosListView.setOnItemClickListener(this);
@@ -106,6 +105,9 @@ public class MainActivity extends ActionBarActivity {
 				case 13:
 					startActivity(new Intent(getActivity(), BubblesDemoActivity.class));
 					break;
+                case 14:
+                    startActivity(new Intent(getActivity(), HeartLayoutActivity.class));
+                    break;
 			}
 		}
 	}

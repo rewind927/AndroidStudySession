@@ -26,39 +26,39 @@ https://docs.google.com/spreadsheets/d/1G9dRTedkNuoaW34fEf_szSTRbsVUrSXr1z0qlfWg
 
 Date | Speaker | Topic | Slide |
 -----|---------|-------|--------|
-2015/5/15|Ryan|[CircularFloatingActionMenu](https://github.com/oguzbilgener/CircularFloatingActionMenu)|[CircularFloatingActionMenu](https://docs.google.com/presentation/d/1l9WslPOaDXufh9w5Sa1OY8ghXioEhtELTYoosKHsTXc/edit?usp=sharing)
-2015/5/22|Johnny|[Material Ripple Layout](https://github.com/balysv/material-ripple)|[Material Ripple Layout](https://docs.google.com/presentation/d/1kEzZ6aU3xz3cymKeYtBXYDbuCx_MmXdOgThP6kWSTco/edit?usp=sharing)
-2015/6/12|Ethan|[NumberProgressBar](https://github.com/daimajia/NumberProgressBar)|[NumberProgressBar](https://docs.google.com/presentation/d/1KTfT6TdepP0bRzNJZ1EHwytHfKshQHOiQQKfgV39JZM/edit?usp=sharing)
-2015/6/19|Kami|[ElasticDownload](https://github.com/Tibolte/ElasticDownload)|[ElasticDownload](https://docs.google.com/presentation/d/1UnmET-rgy9pLdl-Ny7_6HNkivXz7XgzoaCztY025GzY/edit?usp=sharing)
-2015/7/3|Ken|[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|[FloatingActionButton](https://docs.google.com/presentation/d/1SCzTknaBmi1EC-lzSH8IqLko0KpwICkRGfUWj9VjIJc/edit?usp=sharing)
+2015/5/15   |Ryan   |[CircularFloatingActionMenu](https://github.com/oguzbilgener/CircularFloatingActionMenu)|[CircularFloatingActionMenu](https://docs.google.com/presentation/d/1l9WslPOaDXufh9w5Sa1OY8ghXioEhtELTYoosKHsTXc/edit?usp=sharing)
+2015/5/22   |Johnny |[Material Ripple Layout](https://github.com/balysv/material-ripple)|[Material Ripple Layout](https://docs.google.com/presentation/d/1kEzZ6aU3xz3cymKeYtBXYDbuCx_MmXdOgThP6kWSTco/edit?usp=sharing)
+2015/6/12   |Ethan  |[NumberProgressBar](https://github.com/daimajia/NumberProgressBar)|[NumberProgressBar](https://docs.google.com/presentation/d/1KTfT6TdepP0bRzNJZ1EHwytHfKshQHOiQQKfgV39JZM/edit?usp=sharing)
+2015/6/19   |Kami   |[ElasticDownload](https://github.com/Tibolte/ElasticDownload)|[ElasticDownload](https://docs.google.com/presentation/d/1UnmET-rgy9pLdl-Ny7_6HNkivXz7XgzoaCztY025GzY/edit?usp=sharing)
+2015/7/3    |Ken    |[FloatActionButton](https://github.com/makovkastar/FloatingActionButton)|[FloatingActionButton](https://docs.google.com/presentation/d/1SCzTknaBmi1EC-lzSH8IqLko0KpwICkRGfUWj9VjIJc/edit?usp=sharing)
 2015/7/17	|Daniel	|[AndroidViewHover](https://github.com/daimajia/AndroidViewHover)|[AndroidViewHover](https://docs.google.com/presentation/d/1LcC8h51e8DFe_FmDdgB5Pv_DfrMX4mSszC54mZHOjXo/edit?usp=sharing)
-2015/7/24	|Zoey	|[GoogleProgressBar](	https://github.com/jpardogo/GoogleProgressBar)|[GoogleProgressBar] (https://drive.google.com/open?id=0BwCXq1hJTV8cUVNWc0tYa0ptelk)
-2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](	https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|[Pull-to-Refresh-Phoenix](https://docs.google.com/document/d/1YS0LYl4Q8Hjpc4pEdBJEuhe93rDl2tHYXPguvcHjUlU/edit?usp=sharing)
-2015/8/7	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|[Android Process Button](https://docs.google.com/document/d/1O6munVzY0ppYxTif0hABu2aUZjNSAyoM3vZfB4lU76Y/edit?usp=sharing)
+2015/7/24	|Zoey	|[GoogleProgressBar](https://github.com/jpardogo/GoogleProgressBar)|[GoogleProgressBar] (https://drive.google.com/open?id=0BwCXq1hJTV8cUVNWc0tYa0ptelk)
+2015/7/31	|Ascii	|[Pull-to-Refresh.Rentals-Android](https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android)|[Pull-to-Refresh-Phoenix](https://docs.google.com/document/d/1YS0LYl4Q8Hjpc4pEdBJEuhe93rDl2tHYXPguvcHjUlU/edit?usp=sharing)
+2015/8/7	|Karen	|[android-process-button](https://github.com/dmytrodanylyk/android-process-button)|[Android Process Button](https://docs.google.com/document/d/1O6munVzY0ppYxTif0hABu2aUZjNSAyoM3vZfB4lU76Y/edit?usp=sharing)
 2015/8/14	|Wendy	|[Titanic](	https://github.com/RomainPiel/Titanic)|[Titanic](https://docs.google.com/a/kkbox.com/document/d/10mparm_UbJbcQeuPeWRggr3vzKzCRTq0s39kHIW6TjM/edit?usp=sharing)
-2015/8/21	|Jason	|[Swipecards](	https://github.com/Diolor/Swipecards)|[Swipecards](https://docs.google.com/document/d/1XO8CGJ8qvnHboM613DZk-tBO5tzUO-Q1rIdvhQbu80k/edit?usp=sharing)
+2015/8/21	|Jason	|[Swipecards](https://github.com/Diolor/Swipecards)|[Swipecards](https://docs.google.com/document/d/1XO8CGJ8qvnHboM613DZk-tBO5tzUO-Q1rIdvhQbu80k/edit?usp=sharing)
 2015/8/29	|Ryan	|[FlipViewPager.Draco](	https://github.com/Yalantis/FlipViewPager.Draco)|[FlipViewPager.Draco](https://docs.google.com/presentation/d/1sUr9DeWdzS5dyanhm_YR98T092PODZ-6LTUrfqizrJI/edit?usp=sharing)
 2015/9/4	|Johnny	|[CircleIndicator](	https://github.com/ongakuer/CircleIndicator)|[CircleIndicator](https://docs.google.com/document/d/1re7jt9g2PAW-KfqvAUiHKNHT_P746TrVTWRDq9BYyJc/edit?usp=sharing)
 2015/9/11	|Ethan	|[Bubbles](	https://github.com/txusballesteros/bubbles-for-android)| [Bubbles](https://docs.google.com/presentation/d/1KEIIKdTWcHV7GQDln0ihtHVJuYXyYrh1hmH-_FMaHQQ/edit?usp=sharing)
-2015/9/18	|Kami	|[DraggablePanel](	https://github.com/pedrovgs/DraggablePanel)|
-2015/9/25	|Ken	|[InboxLayout](	https://github.com/zhaozhentao/InboxLayout)|
-2015/10/2	|Zoey	|[android-crop](	https://github.com/jdamcd/android-crop)|
-2015/10/9	|Daniel	|[FreeFlow](	https://github.com/Comcast/FreeFlow)|
-2015/10/16	|Ascii	|[PermissionsDispatcher](	http://hotchemi.github.io/PermissionsDispatcher/)|
-2015/10/23	|Karen	|[android-process-button](	https://github.com/dmytrodanylyk/android-process-button)|
-2015/10/30	|Wendy	|[SwipeListView](	https://github.com/47deg/android-swipelistview)|
-2015/11/13	|Jason	|[StickyListHeaders](	https://github.com/emilsjolander/StickyListHeaders)|
-2015/11/20	|Ryan	|[CircleImageView](	https://github.com/hdodenhof/CircleImageView)|
-2015/11/27	|Johnny	|[ArcAnimator](	https://github.com/asyl/ArcAnimator)|
-2015/12/4	|Ethan	|[AndroidImageSlider](	https://github.com/daimajia/AndroidImageSlider)|
-2015/12/11	|Kami	|[ParallaxPagerTransformer](	https://github.com/xgc1986/ParallaxPagerTransformer)|
-2015/12/18	|Ken	|[FlabbyListView](	https://github.com/jpardogo/FlabbyListView)|
-2015/12/25	|Zoey	|[DiscreteSeekBar](	https://github.com/AnderWeb/discreteSeekBar)|
-2016/1/8	|Daniel	|[CircularReveal](	https://github.com/ozodrukh/CircularReveal)|
+2015/9/18	|Kami	|[HeartLayout](https://github.com/tyrantgit/HeartLayout)|
+2015/9/25	|Ken	|[InboxLayout](https://github.com/zhaozhentao/InboxLayout)|
+2015/10/2	|Zoey	|[android-crop](https://github.com/jdamcd/android-crop)|
+2015/10/9	|Daniel	|[FreeFlow](https://github.com/Comcast/FreeFlow)|
+2015/10/16	|Ascii	|[PermissionsDispatcher](http://hotchemi.github.io/PermissionsDispatcher/)|
+2015/10/23	|Karen	|[android-process-button](https://github.com/dmytrodanylyk/android-process-button)|
+2015/10/30	|Wendy	|[SwipeListView](https://github.com/47deg/android-swipelistview)|
+2015/11/13	|Jason	|[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)|
+2015/11/20	|Ryan	|[CircleImageView](https://github.com/hdodenhof/CircleImageView)|
+2015/11/27	|Johnny	|[ArcAnimator](https://github.com/asyl/ArcAnimator)|
+2015/12/4	|Ethan	|[AndroidImageSlider](https://github.com/daimajia/AndroidImageSlider)|
+2015/12/11	|Kami	|[ParallaxPagerTransformer](https://github.com/xgc1986/ParallaxPagerTransformer)|
+2015/12/18	|Ken	|[FlabbyListView](https://github.com/jpardogo/FlabbyListView)|
+2015/12/25	|Zoey	|[DiscreteSeekBar](https://github.com/AnderWeb/discreteSeekBar)|
+2016/1/8	|Daniel	|[CircularReveal](https://github.com/ozodrukh/CircularReveal)|
 2016/1/15	|Ascii	|[Shimmer for Android](	https://github.com/facebook/shimmer-android)|
-2016/1/22	|Karen	|[Context-Menu.Android](	https://github.com/Yalantis/Context-Menu.Android)|
-2016/1/29	|Wendy	|[DialogPlus](	https://github.com/orhanobut/dialogplus)|
-2016/2/5	|Jason	|[EtsyBlur](	https://github.com/Manabu-GT/EtsyBlur)|
+2016/1/22	|Karen	|[Context-Menu.Android](https://github.com/Yalantis/Context-Menu.Android)|
+2016/1/29	|Wendy	|[DialogPlus](https://github.com/orhanobut/dialogplus)|
+2016/2/5	|Jason	|[EtsyBlur](https://github.com/Manabu-GT/EtsyBlur)|
 
 
 ### Reference:

@@ -1,4 +1,4 @@
-include ':app', ':processbutton', ':titanic', ':flipviewpager', ':circleindicator', ':bubbles',
+include ':app',
         ':circluarfloatingactionmenu',
         ':materialripplelayout',
         ':NumberProgressBar',
@@ -6,4 +6,11 @@ include ':app', ':processbutton', ':titanic', ':flipviewpager', ':circleindicato
         ':floatingactionbutton',
         ':androidviewholder',
         ':googleProgressBar',
-        ':phoenix',':Swipecards'
+        ':phoenix',
+        ':processbutton',
+        ':titanic',
+        ':Swipecards',
+        ':flipviewpager',
+        ':circleindicator',
+        ':bubbles',
+        ':heartlayout'

@@ -15,5 +15,6 @@
 		<item>FlipViewPager</item>
 		<item>CircleIndicator</item>
 		<item>Bubbles</item>
+        <item>HeartLayout</item>
 	</string-array>
 </resources>

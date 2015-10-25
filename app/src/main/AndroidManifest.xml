@@ -54,6 +54,8 @@
 				android:name="com.johnny.circleindicator.IndicatorDemoActivity"/>
 		<activity
 				android:name="com.kkbox.bubbles.BubblesDemoActivity"/>
+        <activity
+                android:name="tyrantgit.widget.sample.HeartLayoutActivity"/>
 	</application>
 
 </manifest>
