@@ -25,6 +25,7 @@ import com.wendy.titanic.TitanicActivity;
 
 import is.arontibo.library.sample.ElasticDownloadActivity;
 import kkbox.com.circluarfloatingactionmenu.activity.MenuWithFABActivity;
+import tyrantgit.widget.sample.HeartLayoutActivity;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -101,6 +102,9 @@ public class MainActivity extends ActionBarActivity {
 					break;
 				case 12:
 					startActivity(new Intent(getActivity(), IndicatorDemoActivity.class));
+					break;
+				case 13:
+					startActivity(new Intent(getActivity(), HeartLayoutActivity.class));
 					break;
 			}
 		}

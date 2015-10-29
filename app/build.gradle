@@ -37,4 +37,5 @@ dependencies {
 	compile project(':Swipecards')
 	compile project(':flipviewpager')
 	compile project(':circleindicator')
+	compile project(':heartlayout')
 }
