@@ -54,12 +54,12 @@ public class HeartView extends ImageView {
     }
 
     public void setColorAndDrawables(int color, int heartResId, int heartBorderResId) {
-        if (heartResId != mHeartResId) {
+//        if (heartResId != mHeartResId) {
             sHeart = null;
-        }
-        if (heartBorderResId != mHeartBorderResId) {
+//        }
+//        if (heartBorderResId != mHeartBorderResId) {
             sHeartBorder = null;
-        }
+//        }
         mHeartResId = heartResId;
         mHeartBorderResId = heartBorderResId;
         setColor(color);

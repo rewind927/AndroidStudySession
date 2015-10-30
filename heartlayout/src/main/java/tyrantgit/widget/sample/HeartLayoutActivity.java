@@ -3,10 +3,11 @@ package tyrantgit.widget.sample;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import tyrantgit.widget.HeartLayout;
 import tyrantgit.widget.R;
@@ -15,8 +16,8 @@ import tyrantgit.widget.R;
 public class HeartLayoutActivity extends Activity {
 
     private Random mRandom = new Random();
-    private Timer mTimer = new Timer();
     private HeartLayout mHeartLayout;
+    private ImageView mHeartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,27 +25,24 @@ public class HeartLayoutActivity extends Activity {
         setContentView(R.layout.activity_heartlayout);
 
         mHeartLayout = (HeartLayout) findViewById(R.id.heart_layout);
-        mTimer.scheduleAtFixedRate(new TimerTask() {
+        mHeartButton = (ImageView) findViewById(R.id.heart_btn);
+        mHeartButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                mHeartLayout.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        mHeartLayout.addHeart(randomColor());
-                    }
-                });
+            public void onClick(View view) {
+                if (isRandomBear()) {
+                    mHeartLayout.addHeart(randomColor(), R.drawable.bear, R.drawable.bear_border);
+                } else {
+                    mHeartLayout.addHeart(randomColor(), R.drawable.heart, R.drawable.heart_border);
+                }
             }
-        }, 500, 200);
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mTimer.cancel();
+        });
     }
 
     private int randomColor() {
         return Color.rgb(mRandom.nextInt(255), mRandom.nextInt(255), mRandom.nextInt(255));
+    }
+
+    private boolean isRandomBear() {
+        return mRandom.nextInt(50) % 5 == 0;
     }
 }
