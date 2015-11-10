@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.afollestad.dragselectrecyclerview.example.DragSelectActivity;
 import com.ascii.phoenix.PhoenixActivity;
 import com.daimajia.androidviewhover.activity.AndroidViewHolderActivity;
 import com.daimajia.numberprogressbar.example.NumberProgressBarActivity;
@@ -108,6 +109,8 @@ public class MainActivity extends ActionBarActivity {
                 case 14:
                     startActivity(new Intent(getActivity(), HeartLayoutActivity.class));
                     break;
+				case 15:
+					startActivity(new Intent(getActivity(), DragSelectActivity.class));
 			}
 		}
 	}

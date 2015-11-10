@@ -16,5 +16,6 @@
 		<item>CircleIndicator</item>
 		<item>Bubbles</item>
         <item>HeartLayout</item>
+		<item>DragSelectRecyclerView</item>
 	</string-array>
 </resources>

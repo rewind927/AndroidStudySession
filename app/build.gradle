@@ -39,4 +39,5 @@ dependencies {
 	compile project(':circleindicator')
 	compile project(':bubbles')
     compile project(':heartlayout')
+    compile project(':dragselectrecyclerview')
 }

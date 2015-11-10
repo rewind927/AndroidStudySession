@@ -13,4 +13,5 @@ include ':app',
         ':flipviewpager',
         ':circleindicator',
         ':bubbles',
-        ':heartlayout'
+        ':heartlayout',
+        ':dragselectrecyclerview'
