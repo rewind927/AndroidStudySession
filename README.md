@@ -41,7 +41,7 @@ Date | Speaker | Topic | Slide |
 2015/9/4	|Johnny	|[CircleIndicator](https://github.com/ongakuer/CircleIndicator)|[CircleIndicator](https://docs.google.com/document/d/1re7jt9g2PAW-KfqvAUiHKNHT_P746TrVTWRDq9BYyJc/edit?usp=sharing)
 2015/9/11	|Ethan	|[Bubbles](https://github.com/txusballesteros/bubbles-for-android)|[Bubbles](https://docs.google.com/presentation/d/1KEIIKdTWcHV7GQDln0ihtHVJuYXyYrh1hmH-_FMaHQQ/edit?usp=sharing)
 2015/9/18	|Kami	|[HeartLayout](https://github.com/tyrantgit/HeartLayout)|[HeartLayout](https://docs.google.com/presentation/d/1JdNoqTaksx49JiIf8qQbTO4UwYjbL6gEm-RsAT4psoA/edit?usp=sharing)
-2015/9/25	|Ken	|[InboxLayout](https://github.com/zhaozhentao/InboxLayout)|
+2015/9/25	|Ken	|[DragSelectRecyclerView](https://github.com/afollestad/drag-select-recyclerview)|[DragSelectRecyclerView](https://docs.google.com/presentation/d/18glSxsxFMaFyKAPUNdnn9Ddg1ymyoyjwZ9cl7qjLTtw/edit?usp=sharing)
 2015/10/2	|Zoey	|[android-crop](https://github.com/jdamcd/android-crop)|
 2015/10/9	|Daniel	|[FreeFlow](https://github.com/Comcast/FreeFlow)|
 2015/10/16	|Ascii	|[PermissionsDispatcher](http://hotchemi.github.io/PermissionsDispatcher/)|
